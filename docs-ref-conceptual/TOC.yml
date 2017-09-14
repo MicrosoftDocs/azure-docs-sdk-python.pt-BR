@@ -1,0 +1,35 @@
+- name: Azure para desenvolvedores de Python
+  href: index.yml
+  items:
+    - name: Visão geral
+      href: python-sdk-azure-overview.md
+    - name: Ferramentas
+      href: python-azure-tools.md
+    - name: Introdução aos módulos do Python
+      href: python-sdk-azure-get-started.md
+    - name: Autenticação
+      href: python-sdk-azure-authenticate.md
+    - name: Guia de início rápido
+      items:
+        - name: Aplicativos Web
+          href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-get-started-python'
+        - name: Banco de Dados PostgreSQL
+          href: 'https://docs.microsoft.com/azure/postgresql/connect-python'
+        - name: CosmosDB
+          href: 'https://docs.microsoft.com/azure/cosmos-db/create-documentdb-python'
+        - name: Data Lake Analytics
+          href: 'https://docs.microsoft.com/azure/data-lake-analytics/data-lake-analytics-manage-use-python-sdk'
+    - name: Tutoriais
+      items:
+        - name: Flask + PostgreSQL
+          href: 'https://docs.microsoft.com/azure/app-service-web/app-service-web-tutorial-docker-python-postgresql-app'
+    - name: Exemplos
+      items:
+        - name: Máquinas virtuais
+          href: python-sdk-azure-virtual-machine-samples.md
+        - name: Aplicativos Web
+          href: python-sdk-azure-web-apps-samples.md
+        - name: Banco de dados SQL
+          href: python-sdk-azure-sql-database-samples.md
+        - name: Todos os exemplos de Python
+          href: 'https://azure.microsoft.com/resources/samples/?platform=python'
