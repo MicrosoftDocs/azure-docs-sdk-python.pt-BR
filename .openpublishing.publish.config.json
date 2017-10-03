@@ -8,7 +8,7 @@
       "build_output_subfolder": "azure-python-sdk",
       "locale": "pt-BR",
       "monikers": [],
-      "open_to_public_contributors": false,
+      "open_to_public_contributors": true,
       "type_mapping": {
         "Conceptual": "Content",
         "ManagedReference": "Content",
@@ -56,7 +56,6 @@
       }
     }
   ],
-  "need_generate_pdf_url_template": false,
   "dependent_packages": [
     {
       "id": "opbuild.templates.uref",
