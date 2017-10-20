@@ -10,11 +10,11 @@ ms.service: Azure
 ms.technology: Azure
 ms.date: 6/15/2017
 ms.author: liwong
-ms.openlocfilehash: ca1af18ae37549238ffaafbd2d5f8223974e0d11
-ms.sourcegitcommit: 12ea38af93cc4f1ba6aac333035829a69f6aed0c
+ms.openlocfilehash: 1dceb1b2fe700904b530f1834f0338f7d5e61999
+ms.sourcegitcommit: 3e477d608bbb41f0c561c88e4c665013e3008c26
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 09/29/2017
+ms.lasthandoff: 10/13/2017
 ---
 # <a name="managed-disks"></a>Managed Disks
 
@@ -129,7 +129,7 @@ async_update.wait()
 
 ## <a name="virtual-machine-scale-sets-with-managed-disks"></a>Conjuntos de Dimensionamento de Máquina Virtual com Managed Disks
 
-Antes dos Managed Disks, é necessário criar uma conta de armazenamento manualmente para todas as VMs que você deseja dentro dp seu Conjunto de Dimensionamento e, em seguida, usar o parâmetro de lista ``vhd_containers`` para fornecer todo o nome da conta de armazenamento para o API REST do Conjunto de Dimensionamento. O guia de transição oficial está disponível neste artigo `<https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>`__.
+Antes dos Managed Disks, é necessário criar uma conta de armazenamento manualmente para todas as VMs que você deseja dentro dp seu Conjunto de Dimensionamento e, em seguida, usar o parâmetro de lista ``vhd_containers`` para fornecer todo o nome da conta de armazenamento para o API REST do Conjunto de Dimensionamento. O guia de transição oficial está disponível neste artigo `<https://docs.microsoft.com/azure/virtual-machine-scale-sets/virtual-machine-scale-sets-convert-template-to-md>`.
 
 Agora com o Managed Disk, você não precisa gerenciar nenhuma conta de armazenamento. Se você estiver acostumado com o para o SDK de Python VMSS, seu ``storage_profile`` agora pode ser exatamente o mesmo que aquele usado na criação da VM:
 
