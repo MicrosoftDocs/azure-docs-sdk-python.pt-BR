@@ -1,0 +1,64 @@
+---
+title: Bibliotecas de Redis do Azure para Python
+description: "Documentação de referência para as bibliotecas de cliente de Python para Redis"
+keywords: Azure, Python, Redis, API, SDK, banco de dados, NoSQL
+author: sptramer
+ms.author: sttramer
+manager: douge
+ms.date: 06/26/2017
+ms.topic: article
+ms.devlang: python
+ms.service: redis
+ms.openlocfilehash: 3ba8d972e91fad229c1489800edeca08760254e6
+ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.translationtype: HT
+ms.contentlocale: pt-BR
+ms.lasthandoff: 08/18/2017
+---
+# <a name="azure-redis-cache-libraries-for-python"></a><span data-ttu-id="c4278-104">Bibliotecas do Cache Redis do Azure para Python</span><span class="sxs-lookup"><span data-stu-id="c4278-104">Azure Redis Cache libraries for Python</span></span>
+
+## <a name="overview"></a><span data-ttu-id="c4278-105">Visão geral</span><span class="sxs-lookup"><span data-stu-id="c4278-105">Overview</span></span>
+
+<span data-ttu-id="c4278-106">O Cache Redis do Azure é baseado no popular cache redis de software livre.</span><span class="sxs-lookup"><span data-stu-id="c4278-106">Azure Redis Cache is based on the popular open source Redis project.</span></span> <span data-ttu-id="c4278-107">Ele oferece acesso a uma instância do Redis segura e dedicada, gerenciada pela Microsoft e acessível a partir dos seus aplicativos no Azure.</span><span class="sxs-lookup"><span data-stu-id="c4278-107">It gives you access to a secure, dedicated Redis instance, managed by Microsoft and accessible from your Azure apps.</span></span>
+
+<span data-ttu-id="c4278-108">O Redis é um repositório de chave-valor avançado, no qual as chaves podem conter estruturas de dados como cadeias de caracteres, hashes, listas, conjuntos e conjuntos classificados.</span><span class="sxs-lookup"><span data-stu-id="c4278-108">Redis is an advanced key-value store, where keys can contain data structures such as strings, hashes, lists, sets, and sorted sets.</span></span> <span data-ttu-id="c4278-109">O Redis dá suporte a um conjunto de operações atômicas nesses tipos de dados.</span><span class="sxs-lookup"><span data-stu-id="c4278-109">Redis supports a set of atomic operations on these data types.</span></span>
+
+<span data-ttu-id="c4278-110">Saiba mais sobre o [Cache Redis do Azure](https://docs.microsoft.com/azure/redis-cache/).</span><span class="sxs-lookup"><span data-stu-id="c4278-110">Learn more about [Azure Redis Cache](https://docs.microsoft.com/azure/redis-cache/).</span></span>
+
+## <a name="management-api"></a><span data-ttu-id="c4278-111">API de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="c4278-111">Management API</span></span>
+
+<span data-ttu-id="c4278-112">Criar e gerenciar recursos do Redis na sua assinatura com a API de gerenciamento do Redis.</span><span class="sxs-lookup"><span data-stu-id="c4278-112">Create and manage your Redis resources in your subscription with the Redis management API.</span></span>
+
+```bash
+pip install redis
+pip install azure-mgmt-redis
+```
+
+### <a name="example"></a><span data-ttu-id="c4278-113">Exemplo</span><span class="sxs-lookup"><span data-stu-id="c4278-113">Example</span></span>
+
+<span data-ttu-id="c4278-114">O exemplo a seguir cria um novo cache Redis:</span><span class="sxs-lookup"><span data-stu-id="c4278-114">The following example creates a new Redis cache:</span></span>
+
+```python
+from azure.mgmt.redis import RedisManagementClient
+from azure.mgmt.redis.models import Sku, RedisCreateOrUpdateParameters
+
+redis_client = RedisManagementClient(
+    credentials,
+    subscription_id
+)
+group_name = 'myresourcegroup'
+cache_name = 'mycachename'
+redis_cache = redis_client.redis.create_or_update(
+    group_name,
+    cache_name,
+    RedisCreateOrUpdateParameters(
+        sku = Sku(name = 'Basic', family = 'C', capacity = '1'),
+        location = "East US"
+    )
+)
+# redis_cache is a RedisResourceWithAccessKey instance
+```
+
+> [!div class="nextstepaction"]
+> [<span data-ttu-id="c4278-115">Explorar as APIs de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="c4278-115">Explore the Management APIs</span></span>](/python/api/overview/azure/redis/managementlibrary)
+
