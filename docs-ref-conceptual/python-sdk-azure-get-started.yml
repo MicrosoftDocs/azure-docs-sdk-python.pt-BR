@@ -1,5 +1,4 @@
-### YamlMime:YamlDocument
-documentType: Tutorial
+### YamlMime:Tutorial
 title: "Introdução ao desenvolvimento em nuvem usando as bibliotecas do Azure para Python"
 metadata:
   title: "Introdução às bibliotecas do Azure para Python"
@@ -10,15 +9,15 @@ metadata:
   nextTutorialTitle: "referência de SDK do python"
   displayType: two-column
   interactive: azurecli
-  ms.openlocfilehash: 103dd9fa8307f8f71eab6d219e8a2dad28ba94f0
-  ms.sourcegitcommit: 932b476b0f0c4c6613a4bdc1b0b96e6ce4ba8fcb
+  ms.openlocfilehash: 23e29f3a4fde678e6b8973f3f7baca0f2afb1cde
+  ms.sourcegitcommit: 5ab15a7214082d16f339a13e4ae7735b3a57a9aa
   ms.translationtype: HT
   ms.contentlocale: pt-BR
-  ms.lasthandoff: 12/14/2017
+  ms.lasthandoff: 01/18/2018
 items:
-- durationInMinutes: 
+- durationInMinutes: 1
   content: "Este guia demonstra o uso de várias bibliotecas do Azure para Python.  \n"
-- title: "Pré-requisitos"
+- title: "pré-requisitos"
   durationInMinutes: 5
   content: "- Uma conta do Azure. Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/).\n- [Python](https://www.python.org/downloads/)\n- [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) ou [CLI do Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).\n"
 - title: "Configurar a autenticação"
