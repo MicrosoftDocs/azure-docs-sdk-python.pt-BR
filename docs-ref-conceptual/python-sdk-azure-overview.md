@@ -11,15 +11,15 @@ ms.technology: azure
 ms.devlang: python
 ms.service: multiple
 ms.assetid: 
-ms.openlocfilehash: 7c069f849007ea2c02cf4347ce213dd033dcd68b
-ms.sourcegitcommit: c57305dad01cad925faf50a64953c408429d4ca9
+ms.openlocfilehash: e0c7b4acd1aa57d141f4407c0ba483a1529d2b35
+ms.sourcegitcommit: 97e5d660eb4a006f969c3010087e1386cc6eb482
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="azure-libraries-for-python"></a>Bibliotecas do Azure para Python
 
-As bibliotecas do Azure para Python permitem que você use serviços do Azure e gerencie recursos do Azure no código do seu aplicativo. As bibliotecas estão disponíveis em [PyPI](python-sdk-azure-install.md) para uso em seus projetos de Python.
+As bibliotecas do Azure para Python permitem que você use serviços do Azure e gerencie recursos do Azure no código do seu aplicativo. 
 
 ## <a name="manage-azure-resources"></a>Gerenciar recursos do Azure
 
@@ -45,7 +45,7 @@ server = sql_client.servers.create_or_update(
 )
 ```
 
-Analise as [instruções de instalação](python-sdk-azure-install.md) para obter uma lista completa das bibliotecas e como importá-las para seus projetos e, em seguida, leia o [artigo de introdução](python-sdk-azure-get-started.yml) para configurar a autenticação e executar o código de exemplo em relação a sua assinatura do Azure.
+Analise as [instruções de instalação](/azure/python-how-to-install) para obter uma lista completa das bibliotecas e como importá-las para seus projetos e, em seguida, leia o [artigo de introdução](python-sdk-azure-get-started.yml) para configurar a autenticação e executar o código de exemplo em relação a sua assinatura do Azure.
 
 ## <a name="connect-to-azure-services"></a>Conectar-se aos serviços do Azure
 
