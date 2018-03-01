@@ -9,17 +9,17 @@ ms.date: 06/26/2017
 ms.topic: article
 ms.devlang: python
 ms.service: redis
-ms.openlocfilehash: 3ba8d972e91fad229c1489800edeca08760254e6
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: c2f8ebcbcbd7b71c1fa96e46a8148a3c0b88877f
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-redis-cache-libraries-for-python"></a>Bibliotecas do Cache Redis do Azure para Python
 
 ## <a name="overview"></a>Visão geral
 
-O Cache Redis do Azure é baseado no popular cache redis de software livre. Ele oferece acesso a uma instância do Redis segura e dedicada, gerenciada pela Microsoft e acessível a partir dos seus aplicativos no Azure.
+O Cache Redis do Azure se baseia no popular projeto Redis de software livre. Ele oferece acesso a uma instância do Redis segura e dedicada, gerenciada pela Microsoft e acessível desde os seus aplicativos do Azure.
 
 O Redis é um repositório de chave-valor avançado, no qual as chaves podem conter estruturas de dados como cadeias de caracteres, hashes, listas, conjuntos e conjuntos classificados. O Redis dá suporte a um conjunto de operações atômicas nesses tipos de dados.
 
@@ -60,5 +60,5 @@ redis_cache = redis_client.redis.create_or_update(
 ```
 
 > [!div class="nextstepaction"]
-> [Explorar as APIs de gerenciamento](/python/api/overview/azure/redis/managementlibrary)
+> [Explorar as APIs de gerenciamento](/python/api/overview/azure/redis/management)
 

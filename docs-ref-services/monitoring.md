@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 04aeb24f5ed294f5862e2e1f1bc6319c317bb157
-ms.sourcegitcommit: cd2d097f5e91aae1eb1cd5a238d3b49ac427fd64
+ms.openlocfilehash: 6a073f9943b1f5af962546931e9d13372720e193
+ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 10/26/2017
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-monitoring-libraries-for-python"></a>Bibliotecas do Azure Monitor para Python
 
@@ -34,7 +34,7 @@ Este exemplo obtém as métricas de um recurso no Azure (VMs, etc.). Este exempl
 
 Uma lista completa das palavras-chave disponíveis para filtros está disponível [aqui](https://msdn.microsoft.com/library/azure/mt743622.aspx).
 
-As métricas suportadas por tipo de recurso estão disponíveis [aqui](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-supported-metrics).
+As métricas suportadas por tipo de recurso estão disponívelis [aqui](https://docs.microsoft.com/azure/monitoring-and-diagnostics/monitoring-supported-metrics).
 
 ```python
 import datetime
@@ -178,4 +178,4 @@ my_alert = client.alert_rules.create_or_update(
 )
 ```
 > [!div class="nextstepaction"]
-> [Explorar as APIs de gerenciamento](/python/api/overview/azure/monitoring/managementlibrary)
+> [Explorar as APIs de gerenciamento](/python/api/overview/azure/monitoring/management)
