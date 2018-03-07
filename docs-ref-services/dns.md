@@ -11,11 +11,11 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 59ae3628b4a810db8fee21aacf46c13054dc8cd3
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 294373469b1792821253ae46ab51fa0c06a74ffa
+ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/24/2018
 ---
 # <a name="azure-dns-libraries-for-python"></a>Bibliotecas de DNS do Azure para Python
 
@@ -25,31 +25,72 @@ O [DNS do Azure](/azure/dns/dns-overview) é um serviço de hospedagem para dom�
 
 Para começar a usar o DNS do Azure, consulte [Introdução ao DNS do Azure usando o portal do Azure](/azure/dns/dns-getstarted-portal).
 
-## <a name="management-apis"></a>APIs de gerenciamento
-
-Criar e gerenciar zonas DNS e registros com a API de gerenciamento.
-
-Instalar o pacote de gerenciamento com PIP.
+## <a name="management-apipythonapioverviewazurednsmanagement"></a>[API de Gerenciamento](/python/api/overview/azure/dns/management)
 
 ```bash
 pip install azure-mgmt-dns
 ```
 
-### <a name="example"></a>Exemplo
+## <a name="create-the-management-client"></a>Criar o cliente de gerenciamento
 
-Criar uma nova zona DNS.
+O código a seguir cria uma instância do cliente de gerenciamento.
 
-```python
+Será preciso fornecer sua ``subscription_id``, que pode ser recuperada de [sua lista de assinatura](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping).
+
+Consulte [Autenticação de gerenciamento de recursos](/python/azure/python-sdk-azure-authenticate) para obter detalhes sobre o tratamento da autenticação do Azure Active Directory com o SDK do Python e sobre a criação de uma instância ``Credentials``.
+
+```python 
 from azure.mgmt.dns import DnsManagementClient
+from azure.common.credentials import UserPassCredentials
 
-dns_client = DnsManagementClient(credentials, 'your-subscription-id')
-zone = dns_client.zones.create_or_update('resource-group',
-                                         'zone_name_no_dot',
-                                         {
-                                            "location": "global"
-                                         })
+# Replace this with your subscription id
+subscription_id = '33333333-3333-3333-3333-333333333333'
 
+# See above for details on creating different types of AAD credentials
+credentials = UserPassCredentials(
+    'user@domain.com',  # Your user
+    'my_password',      # Your password
+)
+
+dns_client = DnsManagementClient(
+    credentials,
+    subscription_id
+)
+```
+
+## <a name="create-dns-zone"></a>Criar zona DNS
+```python
+# The only valid value is 'global', otherwise you will get a:
+# The subscription is not registered for the resource type 'dnszones' in the location 'westus'.
+zone = dns_client.zones.create_or_update(
+    'MyResourceGroup',
+    'pydns.com',
+    {
+        'location': 'global'
+    }
+)
+```
+    
+## <a name="create-a-record-set"></a>Criar um conjunto de registros
+```python
+record_set = dns_client.record_sets.create_or_update(
+    'MyResourceGroup',
+    'pydns.com',
+    'MyRecordSet',
+    'A',
+    {
+            "ttl": 300,
+            "arecords": [
+                {
+                "ipv4_address": "1.2.3.4"
+                },
+                {
+                "ipv4_address": "1.2.3.5"
+                }
+            ]
+    }
+)
 ```
 
 > [!div class="nextstepaction"]
-> [Explorar as APIs de gerenciamento](/python/api/overview/azure/dns/managementlibrary)
+> [Explorar as APIs de gerenciamento](/python/api/overview/azure/dns/management)
