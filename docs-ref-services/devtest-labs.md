@@ -2,30 +2,66 @@
 title: Bibliotecas do Azure DevTest Labs para Python
 description: "Referência para bibliotecas do Azure DevTest Labs para Python"
 keywords: Azure, Python, SDK, API, DevTest Labs
-author: sptramer
-ms.author: sttramer
-manager: douge
-ms.date: 07/10/2017
+author: lisawong19
+ms.author: liwong
+manager: routlaw
+ms.date: 02/21/2018
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 1961876d831d0b449b58b89341032cf1c068745c
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: 5807b85f02c05c2a767a2df2e89d9e98b7e6e05b
+ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2017
+ms.lasthandoff: 02/24/2018
 ---
-# <a name="azure-devtest-labs-libraries-for-python"></a><span data-ttu-id="07aed-104">Bibliotecas do Azure DevTest Labs para Python</span><span class="sxs-lookup"><span data-stu-id="07aed-104">Azure DevTest Labs libraries for python</span></span>
+# <a name="azure-devtest-labs-libraries-for-python"></a><span data-ttu-id="b42f7-104">Bibliotecas do Azure DevTest Labs para Python</span><span class="sxs-lookup"><span data-stu-id="b42f7-104">Azure DevTest Labs libraries for python</span></span>
 
-## <a name="install-the-libraries"></a><span data-ttu-id="07aed-105">Instalar as bibliotecas</span><span class="sxs-lookup"><span data-stu-id="07aed-105">Install the libraries</span></span>
-
-
-### <a name="management"></a><span data-ttu-id="07aed-106">Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="07aed-106">Management</span></span>
+## <a name="management-apipythonapioverviewazuredevtestlabsmanagement"></a>[<span data-ttu-id="b42f7-105">API de Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="b42f7-105">Management API</span></span>](/python/api/overview/azure/devtestlabs/management)
 
 ```bash
 pip install azure-mgmt-devtestlabs
 ```
+
+## <a name="create-the-management-client"></a><span data-ttu-id="b42f7-106">Criar o cliente de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="b42f7-106">Create the management client</span></span>
+
+<span data-ttu-id="b42f7-107">O código a seguir cria uma instância do cliente de gerenciamento.</span><span class="sxs-lookup"><span data-stu-id="b42f7-107">The following code creates an instance of the management client.</span></span>
+
+<span data-ttu-id="b42f7-108">Será preciso fornecer sua ``subscription_id``, que pode ser recuperada de [sua lista de assinatura](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping).</span><span class="sxs-lookup"><span data-stu-id="b42f7-108">You will need to provide your ``subscription_id`` which can be retrieved from [your subscription list](https://manage.windowsazure.com/#Workspaces/AdminTasks/SubscriptionMapping).</span></span>
+
+<span data-ttu-id="b42f7-109">Consulte [Autenticação de gerenciamento de recursos](/python/azure/python-sdk-azure-authenticate) para obter detalhes sobre o tratamento da autenticação do Azure Active Directory com o SDK do Python e sobre a criação de uma instância ``Credentials``.</span><span class="sxs-lookup"><span data-stu-id="b42f7-109">See [Resource Management Authentication](/python/azure/python-sdk-azure-authenticate) for details on handling Azure Active Directory authentication with the Python SDK, and creating a ``Credentials`` instance.</span></span>
+
+```python
+from azure.mgmt.devtestlabs import DevTestLabsClient
+from azure.common.credentials import UserPassCredentials
+
+# Replace this with your subscription id
+subscription_id = '33333333-3333-3333-3333-333333333333'
+
+# See above for details on creating different types of AAD credentials
+credentials = UserPassCredentials(
+    'user@domain.com',  # Your user
+    'my_password',      # Your password
+)
+
+devtestlabs_client = DevTestLabsClient(
+    credentials,
+    subscription_id
+)
+```
+
+## <a name="create-lab"></a><span data-ttu-id="b42f7-110">Criar Laboratório</span><span class="sxs-lookup"><span data-stu-id="b42f7-110">Create lab</span></span>
+
+```python
+async_lab = self.client.lab.create_or_update_resource(
+    'MyResourceGroup',
+    'MyLab',
+    {'location': 'westus'}
+)
+lab = async_lab.result() # Blocking wait
+``` 
+
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="07aed-107">Explorar as APIs de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="07aed-107">Explore the Management APIs</span></span>](/python/api/overview/azure/devtestlabs/managementlibrary)
+> [<span data-ttu-id="b42f7-111">Explorar as APIs de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="b42f7-111">Explore the Management APIs</span></span>](/python/api/overview/azure/devtestlabs/management)
