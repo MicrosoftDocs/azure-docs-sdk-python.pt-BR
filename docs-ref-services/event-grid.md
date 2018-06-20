@@ -16,6 +16,7 @@ ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 05/08/2018
+ms.locfileid: "33901421"
 ---
 # <a name="event-grid-libraries-for-python"></a>Bibliotecas da Grade de Eventos para Python
 

@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas do Azure Data Lake Analytics para Python
-description: "Referência para bibliotecas do Azure Data Lake Analytics para Python"
+description: Referência para bibliotecas do Azure Data Lake Analytics para Python
 keywords: Azure, Python, SDK, API, Data Lake Analytics
 author: lisawong19
 ms.author: liwong
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478759"
 ---
 # <a name="azure-data-lake-analytics-libraries-for-python"></a>Bibliotecas do Azure Data Lake Analytics para Python
 

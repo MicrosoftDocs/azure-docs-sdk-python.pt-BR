@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas de gerenciamento do Azure para exemplos de Banco de Dados SQL para Python
-description: "Obter o exemplo de código para criação e atualização de bancos de dados SQL do Azure usando as bibliotecas de Gerenciamento do Azure para Python"
+description: Obter o exemplo de código para criação e atualização de bancos de dados SQL do Azure usando as bibliotecas de Gerenciamento do Azure para Python
 keywords: Azure, Python, SDK, API, Banco de Dados SQL
 author: lisawong19
 ms.author: liwong
@@ -10,12 +10,13 @@ ms.topic: article
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.assetid: 
+ms.assetid: ''
 ms.openlocfilehash: a0ec8fb3d2ef5eb4c5c58a3370b6efa221e33029
 ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/18/2017
+ms.locfileid: "20909009"
 ---
 # <a name="azure-management-libraries-for-python-samples-for-sql-database"></a>Exemplos de bibliotecas de gerenciamento do Azure para Python para Banco de Dados SQL
 

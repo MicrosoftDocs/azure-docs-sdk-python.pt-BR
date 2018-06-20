@@ -1,7 +1,7 @@
 ---
 title: Bibliotecas de Aplicativos Web do Azure para Python
-description: 
-keywords: "Azure, Python, SDK, API, aplicativos Web, Serviço de Aplicativo"
+description: ''
+keywords: Azure, Python, SDK, API, aplicativos Web, Serviço de Aplicativo
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479219"
 ---
 # <a name="azure-web-apps-libraries-for-python"></a>Bibliotecas de Aplicativos Web do Azure para Python
 

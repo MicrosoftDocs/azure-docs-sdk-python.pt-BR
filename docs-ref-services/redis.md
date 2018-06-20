@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas de Redis do Azure para Python
-description: "Documentação de referência para as bibliotecas de cliente de Python para Redis"
+description: Documentação de referência para as bibliotecas de cliente de Python para Redis
 keywords: Azure, Python, Redis, API, SDK, banco de dados, NoSQL
 author: sptramer
 ms.author: sttramer
@@ -14,6 +14,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479239"
 ---
 # <a name="azure-redis-cache-libraries-for-python"></a>Bibliotecas do Cache Redis do Azure para Python
 

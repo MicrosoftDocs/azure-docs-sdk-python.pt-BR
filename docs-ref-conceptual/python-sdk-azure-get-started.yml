@@ -1,12 +1,12 @@
 ### YamlMime:Tutorial
-title: "Introdução ao desenvolvimento em nuvem usando as bibliotecas do Azure para Python"
+title: Introdução ao desenvolvimento em nuvem usando as bibliotecas do Azure para Python
 metadata:
-  title: "Introdução às bibliotecas do Azure para Python"
-  description: "Saiba como criar os recursos de nuvem do Azure, conectá-los e usá-los em seus aplicativos do python."
+  title: Introdução às bibliotecas do Azure para Python
+  description: Saiba como criar os recursos de nuvem do Azure, conectá-los e usá-los em seus aplicativos do python.
   audience: Developer
   level: Beginner
   nextTutorialHref: /python/api/overview/azure/?view=azure-python
-  nextTutorialTitle: "referência de SDK do python"
+  nextTutorialTitle: referência de SDK do python
   displayType: two-column
   interactive: azurecli
   ms.openlocfilehash: 23e29f3a4fde678e6b8973f3f7baca0f2afb1cde
@@ -14,22 +14,259 @@ metadata:
   ms.translationtype: HT
   ms.contentlocale: pt-BR
   ms.lasthandoff: 01/18/2018
+  ms.locfileid: "27907926"
 items:
 - durationInMinutes: 1
   content: "Este guia demonstra o uso de várias bibliotecas do Azure para Python.  \n"
-- title: "pré-requisitos"
+- title: pré-requisitos
   durationInMinutes: 5
-  content: "- Uma conta do Azure. Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/).\n- [Python](https://www.python.org/downloads/)\n- [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) ou [CLI do Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).\n"
-- title: "Configurar a autenticação"
+  content: >
+    - Uma conta do Azure. Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/).
+
+    - [Python](https://www.python.org/downloads/)
+
+    - [Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) ou [CLI do Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).
+- title: Configurar a autenticação
   durationInMinutes: 5
-  content: "> [!IMPORTANT]\n> Isso deve ser usado como a experiência de início rápido do desenvolvedor. Para fins de produção, use [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) ou o seu próprio sistema de credenciais.\n> Qualquer alteração em sua configuração de CLI terá impacto sobre a execução do SDK.\n\nO SDK é capaz de criar um cliente usando a sua assinatura ativa da CLI.\n\nPara definir as credenciais ativas, use [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).\nA ID de assinatura padrão é a única que você tem, ou você pode defini-la usando [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli).\n\n```python\nfrom azure.common.client_factory import get_client_from_cli_profile\nfrom azure.mgmt.compute import ComputeManagementClient\n\nclient = get_client_from_cli_profile(ComputeManagementClient)\n```\n"
+  content: >
+    > [!IMPORTANT]
+
+    > Isso deve ser usado como a experiência de início rápido do desenvolvedor. Para fins de produção, use [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) ou o seu próprio sistema de credenciais.
+
+    > Qualquer alteração em sua configuração de CLI terá impacto sobre a execução do SDK.
+
+
+    O SDK é capaz de criar um cliente usando a sua assinatura ativa da CLI.
+
+
+    Para definir as credenciais ativas, use [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).
+
+    A ID de assinatura padrão é a única que você tem, ou você pode defini-la usando [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli).
+
+
+    ```python
+
+    from azure.common.client_factory import get_client_from_cli_profile
+
+    from azure.mgmt.compute import ComputeManagementClient
+
+
+    client = get_client_from_cli_profile(ComputeManagementClient)
+
+    ```
 - title: Criar um ambiente virtual
   durationInMinutes: 5
-  content: "> [!IMPORTANT]\n> Criar uma ambiente virtual é opcional, mas é altamente recomendável fazer isso.\n\nCriar um ambiente virtual em Bash (Linux ou [Bash para Windows](https://msdn.microsoft.com/commandline/wsl/about)):\n```bash\npip install virtualenv\nvirtualenv mytestenv\ncd mytestenv\nsource ./bin/activate\n```\n\nCriar um ambiente virtual no PowerShell:\n```powershell\npip install virtualenv\nvirtualenv mytestenv\ncd mytestenv\n.\\Scripts\\activate\n```\n"
-- title: "Criar uma máquina virtual Linux"
+  content: >
+    > [!IMPORTANT]
+
+    > Criar uma ambiente virtual é opcional, mas é altamente recomendável fazer isso.
+
+
+    Criar um ambiente virtual em Bash (Linux ou [Bash para Windows](https://msdn.microsoft.com/commandline/wsl/about)):
+
+    ```bash
+
+    pip install virtualenv
+
+    virtualenv mytestenv
+
+    cd mytestenv
+
+    source ./bin/activate
+
+    ```
+
+
+    Criar um ambiente virtual no PowerShell:
+
+    ```powershell
+
+    pip install virtualenv
+
+    virtualenv mytestenv
+
+    cd mytestenv
+
+    .\Scripts\activate
+
+    ```
+- title: Criar uma máquina virtual Linux
   durationInMinutes: 5
-  content: "Esse código cria uma nova VM do Linux com o nome `testLinuxVM` em um grupo de recursos `sampleVmResourceGroup` em execução na região Leste dos EUA do Azure.\n\nAutenticar:\n```azcli\naz login\n```\nCrie um grupo de recursos:\n```azurecli-interactive\naz group create -l eastus --n sampleVmResourceGroup\n```\n\nCriar a rede virtual e a sub-rede:\n```azurecli-interactive\naz network vnet create -g sampleVmResourceGroup -n azure-sample-vnet --address-prefix 10.0.0.0/16 --subnet-name azure-sample-subnet --subnet-prefix 10.0.0.0/24\n```\n\nCriar um endereço IP público:\n```azurecli-interactive\naz network public-ip create -g sampleVmResourceGroup -n azure-sample-ip --allocation-method Dynamic --version IPv6\n```\nCriar um cliente de interface de rede:\n```azurecli-interactive\naz network nic create -g sampleVmResourceGroup --vnet-name azure-sample-vnet --subnet azure-sample-subnet -n azure-sample-nic --public-ip-address azure-sample-ip\n```\n\n```python\nfrom azure.mgmt.network import NetworkManagementClient\nfrom azure.mgmt.compute import ComputeManagementClient\nfrom azure.common.client_factory import get_client_from_cli_profile\n\n# Azure Datacenter\nLOCATION = 'eastus'\n\n# Resource Group\nGROUP_NAME = 'sampleVmResourceGroup'\n\n# Network\nVNET_NAME = 'azure-sample-vnet'\nSUBNET_NAME = 'azure-sample-subnet'\n\n# VM\nNIC_NAME = 'azure-sample-nic'\nVM_NAME = 'testLinuxVM'\n\nUSERNAME = 'userlogin'\nPASSWORD = 'Pa$$w0rd91'\n\nIP_ADDRESS_NAME='azure-sample-ip'\n\nVM_REFERENCE = {\n    'linux': {\n        'publisher': 'Canonical',\n        'offer': 'UbuntuServer',\n        'sku': '16.04.0-LTS',\n        'version': 'latest'\n    },\n    'windows': {\n        'publisher': 'MicrosoftWindowsServerEssentials',\n        'offer': 'WindowsServerEssentials',\n        'sku': 'WindowsServerEssentials',\n        'version': 'latest'\n    }\n}\n\n\ndef run_example():\n\n    compute_client = get_client_from_cli_profile(ComputeManagementClient)\n    network_client = get_client_from_cli_profile(NetworkManagementClient)\n\n    # get nic id\n    nic = network_client.network_interfaces.get(GROUP_NAME, NIC_NAME)\n\n    # Create Linux VM\n    print('\\nCreating Linux Virtual Machine')\n    vm_parameters = create_vm_parameters(nic.id, VM_REFERENCE['linux'])\n    print(vm_parameters)\n    async_vm_creation = compute_client.virtual_machines.create_or_update(\n        GROUP_NAME, VM_NAME, vm_parameters)\n    async_vm_creation.wait()\n\n\ndef create_vm_parameters(nic_id, vm_reference):\n    \"\"\"Create the VM parameters structure.\n    \"\"\"\n    return {\n        'location': LOCATION,\n        'os_profile': {\n            'computer_name': VM_NAME,\n            'admin_username': USERNAME,\n            'admin_password': PASSWORD\n        },\n        'hardware_profile': {\n            'vm_size': 'Standard_DS1_v2'\n        },\n        'storage_profile': {\n            'image_reference': {\n                'publisher': vm_reference['publisher'],\n                'offer': vm_reference['offer'],\n                'sku': vm_reference['sku'],\n                'version': vm_reference['version']\n            },\n        },\n        'network_profile': {\n            'network_interfaces': [{\n                'id': nic_id,\n            }]\n        },\n    }\n\n\nif __name__ == \"__main__\":\n    run_example()\n```\n\nQuando o programa for concluído, verifique se a máquina virtual em sua assinatura com a CLI do Azure 2.0:\n\n```azurecli-interactive\naz vm list --resource-group sampleVmResourceGroup\n```\n\nDepois de verificar se o código funcionou, use a CLI para excluir a VM e seus recursos.\n\n```azurecli-interactive\naz group delete --name sampleVmResourceGroup\n```\n"
-- title: "Implantar um aplicativo Web a partir de um repositório GitHub"
+  content: >
+    Esse código cria uma nova VM do Linux com o nome `testLinuxVM` em um grupo de recursos `sampleVmResourceGroup` em execução na região Leste dos EUA do Azure.
+
+
+    Autenticar:
+
+    ```azcli
+
+    az login
+
+    ```
+
+    Crie um grupo de recursos:
+
+    ```azurecli-interactive
+
+    az group create -l eastus --n sampleVmResourceGroup
+
+    ```
+
+
+    Criar a rede virtual e a sub-rede:
+
+    ```azurecli-interactive
+
+    az network vnet create -g sampleVmResourceGroup -n azure-sample-vnet --address-prefix 10.0.0.0/16 --subnet-name azure-sample-subnet --subnet-prefix 10.0.0.0/24
+
+    ```
+
+
+    Criar um endereço IP público:
+
+    ```azurecli-interactive
+
+    az network public-ip create -g sampleVmResourceGroup -n azure-sample-ip --allocation-method Dynamic --version IPv6
+
+    ```
+
+    Criar um cliente de interface de rede:
+
+    ```azurecli-interactive
+
+    az network nic create -g sampleVmResourceGroup --vnet-name azure-sample-vnet --subnet azure-sample-subnet -n azure-sample-nic --public-ip-address azure-sample-ip
+
+    ```
+
+
+    ```python
+
+    from azure.mgmt.network import NetworkManagementClient
+
+    from azure.mgmt.compute import ComputeManagementClient
+
+    from azure.common.client_factory import get_client_from_cli_profile
+
+
+    # Azure Datacenter
+
+    LOCATION = 'eastus'
+
+
+    # Resource Group
+
+    GROUP_NAME = 'sampleVmResourceGroup'
+
+
+    # Network
+
+    VNET_NAME = 'azure-sample-vnet'
+
+    SUBNET_NAME = 'azure-sample-subnet'
+
+
+    # VM
+
+    NIC_NAME = 'azure-sample-nic'
+
+    VM_NAME = 'testLinuxVM'
+
+
+    USERNAME = 'userlogin'
+
+    PASSWORD = 'Pa$$w0rd91'
+
+
+    IP_ADDRESS_NAME='azure-sample-ip'
+
+
+    VM_REFERENCE = {
+        'linux': {
+            'publisher': 'Canonical',
+            'offer': 'UbuntuServer',
+            'sku': '16.04.0-LTS',
+            'version': 'latest'
+        },
+        'windows': {
+            'publisher': 'MicrosoftWindowsServerEssentials',
+            'offer': 'WindowsServerEssentials',
+            'sku': 'WindowsServerEssentials',
+            'version': 'latest'
+        }
+    }
+
+
+
+    def run_example():
+
+        compute_client = get_client_from_cli_profile(ComputeManagementClient)
+        network_client = get_client_from_cli_profile(NetworkManagementClient)
+
+        # get nic id
+        nic = network_client.network_interfaces.get(GROUP_NAME, NIC_NAME)
+
+        # Create Linux VM
+        print('\nCreating Linux Virtual Machine')
+        vm_parameters = create_vm_parameters(nic.id, VM_REFERENCE['linux'])
+        print(vm_parameters)
+        async_vm_creation = compute_client.virtual_machines.create_or_update(
+            GROUP_NAME, VM_NAME, vm_parameters)
+        async_vm_creation.wait()
+
+
+    def create_vm_parameters(nic_id, vm_reference):
+        """Create the VM parameters structure.
+        """
+        return {
+            'location': LOCATION,
+            'os_profile': {
+                'computer_name': VM_NAME,
+                'admin_username': USERNAME,
+                'admin_password': PASSWORD
+            },
+            'hardware_profile': {
+                'vm_size': 'Standard_DS1_v2'
+            },
+            'storage_profile': {
+                'image_reference': {
+                    'publisher': vm_reference['publisher'],
+                    'offer': vm_reference['offer'],
+                    'sku': vm_reference['sku'],
+                    'version': vm_reference['version']
+                },
+            },
+            'network_profile': {
+                'network_interfaces': [{
+                    'id': nic_id,
+                }]
+            },
+        }
+
+
+    if __name__ == "__main__":
+        run_example()
+    ```
+
+
+    Quando o programa for concluído, verifique se a máquina virtual em sua assinatura com a CLI do Azure 2.0:
+
+
+    ```azurecli-interactive
+
+    az vm list --resource-group sampleVmResourceGroup
+
+    ```
+
+
+    Depois de verificar se o código funcionou, use a CLI para excluir a VM e seus recursos.
+
+
+    ```azurecli-interactive
+
+    az group delete --name sampleVmResourceGroup
+
+    ```
+- title: Implantar um aplicativo Web a partir de um repositório GitHub
   durationInMinutes: 5
   content: "Esse código implanta um aplicativo Web Flask a partir da ramificação `master` em um repositório GitHub público em um novo [Aplicativo Web do Serviço de Aplicativo do Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) em execução na camada gratuita. \n\nAntes de começar: Fork https://github.com/Azure-Samples/python-docs-hello-world\n\nAutenticar:\n```azcli\naz login\n```\nCrie um grupo de recursos:\n```azurecli-interactive\naz group create -l eastus -n sampleWebResourceGroup\n```\n\nCriar um plano do serviço de aplicativo gratuito:\n```azurecli-interactive\naz appservice plan create -g sampleWebResourceGroup -n sampleFreePlan  --sku Free\n```\n\n```python\nfrom azure.mgmt.web import WebSiteManagementClient\nfrom azure.mgmt.web.models import Site, SiteSourceControl, SiteConfig\nfrom azure.common.client_factory import get_client_from_cli_profile\n\nRESOURCE_GROUP_NAME = 'sampleWebResourceGroup'\nSERVICE_PLAN_NAME = 'sampleFreePlanName'\nWEB_APP_NAME = 'sampleflaskapp123'\nREPO_URL = 'GitHub_Repository_URL'\n\n#log in\nweb_client = get_client_from_cli_profile(WebSiteManagementClient)\n\n# get service plan id\nservice_plan = web_client.app_service_plans.get(RESOURCE_GROUP_NAME, SERVICE_PLAN_NAME)\n\n# create a web app\nsiteConfiguration = SiteConfig(\n    python_version='3.4',\n)\nsite_async_operation = web_client.web_apps.create_or_update(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    Site(\n        location='eastus',\n        server_farm_id=service_plan.id,\n        site_config=siteConfiguration\n    ),\n)\n\nsite = site_async_operation.result()\nprint('created webapp: ' + site.default_host_name)\n\n# continuous deployment with GitHub\nsource_control_async_operation = web_client.web_apps.create_or_update_source_control(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    SiteSourceControl(\n        location='GitHub',\n        repo_url= REPO_URL,\n        branch='master'\n    )\n)\n\nsource_control = source_control_async_operation.result()\nprint(\"added source control to: \" + source_control.name + \"azurewebsites.net\")\n```\n\nAbra um navegador apontado para o aplicativo usando a CLI:\n```azurecli-interactive\naz appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME\n```\n\nRemova o aplicativo Web e o plano da sua assinatura depois de verificar a implantação. \n```azurecli-interactive\naz group delete --name sampleWebResourceGroup\n```\n"
 - title: Conectar-se a um Banco de Dados SQL
@@ -38,5 +275,12 @@ items:
 - title: Gravar um blob em uma nova conta de armazenamento
   durationInMinutes: 5
   content: "Autenticar:\n```azcli\naz login\n```\nCrie um grupo de recursos:\n```azurecli-interactive\naz group create -l eastus -n sampleStorageResourceGroup\n```\n\nCriar uma conta de armazenamento:\n```azurecli-interactive\naz storage account create -n samplestorageaccountname -g sampleStorageResourceGroup -l eastus --sku Standard_RAGRS\n```\n\nEsse código cria uma [conta de armazenamento do Azure](https://docs.microsoft.com/azure/storage/storage-introduction) e, em seguida, usa as bibliotecas de Armazenamento do Azure para Python para criar um novo arquivo HTML na nuvem. \n```python\nfrom azure.storage import CloudStorageAccount\nfrom azure.storage.blob import PublicAccess\nfrom azure.storage.blob.models import ContentSettings\nfrom azure.common.client_factory import get_client_from_cli_profile\nfrom azure.mgmt.storage import StorageManagementClient\n\nRESOURCE_GROUP = 'sampleStorageResourceGroup'\nSTORAGE_ACCOUNT_NAME = 'samplestorageaccountname'\nCONTAINER_NAME = 'samplecontainername'\n\n# log in\nstorage_client = get_client_from_cli_profile(StorageManagementClient)\n\n# create a public storage container to hold the file\nstorage_keys = storage_client.storage_accounts.list_keys(RESOURCE_GROUP, STORAGE_ACCOUNT_NAME)\nstorage_keys = {v.key_name: v.value for v in storage_keys.keys}\n\nstorage_client = CloudStorageAccount(STORAGE_ACCOUNT_NAME, storage_keys['key1'])\nblob_service = storage_client.create_block_blob_service()\n\nblob_service.create_container(CONTAINER_NAME, public_access=PublicAccess.Container)\n\nblob_service.create_blob_from_bytes(\n    CONTAINER_NAME,\n    'helloworld.html',\n    b'<center><h1>Hello World!</h1></center>',\n    content_settings=ContentSettings('text/html')\n)\n\nprint(blob_service.make_blob_url(CONTAINER_NAME, 'helloworld.html'))\n```\nPara verificar se o conteúdo foi carregado com êxito, navegue até a URL impressa. \n\nLimpar a conta de armazenamento usando a CLI:\n```azurecli-interactive\naz group delete --name sampleStorageResourceGroup\n```\n"
-- title: "Próximas etapas"
-  content: "Você concluiu a \"Introdução às bibliotecas do Azure para python\".\n\n- Para saber mais sobre como usar as bibliotecas de gerenciamento do Azure para Python para gerenciar recursos e automatizar tarefas, confira o nosso exemplo de código para [máquinas virtuais](python-sdk-azure-web-apps-samples.md), [aplicativos Web](python-sdk-azure-web-apps-samples.md) e [banco de dados SQL](python-sdk-azure-sql-database-samples.md) .\n\n- Uma [referência](/python/api/overview/azure/?view=azure-python) está disponível para todos os pacotes.\0"
+- title: Próximas etapas
+  content: >-
+    Você concluiu a "Introdução às bibliotecas do Azure para python".
+
+
+    - Para saber mais sobre como usar as bibliotecas de gerenciamento do Azure para Python para gerenciar recursos e automatizar tarefas, confira o nosso exemplo de código para [máquinas virtuais](python-sdk-azure-web-apps-samples.md), [aplicativos Web](python-sdk-azure-web-apps-samples.md) e [banco de dados SQL](python-sdk-azure-sql-database-samples.md) .
+
+
+    - Uma [referência](/python/api/overview/azure/?view=azure-python) está disponível para todos os pacotes.

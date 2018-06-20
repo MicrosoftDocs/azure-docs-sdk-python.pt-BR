@@ -1,7 +1,7 @@
 ---
 title: Bibliotecas do Azure Active Directory para Python
-description: "Documentação de referência para a biblioteca de cliente de Python para o Azure Active Directory"
-keywords: "Azure, Python, SDK, API, SQL, autenticação, AAD, Active Directory, Graph, OAuth 2.0"
+description: Documentação de referência para a biblioteca de cliente de Python para o Azure Active Directory
+keywords: Azure, Python, SDK, API, SQL, autenticação, AAD, Active Directory, Graph, OAuth 2.0
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478919"
 ---
 # <a name="azure-active-directory-libraries-for-python"></a>Bibliotecas do Azure Active Directory para Python
 

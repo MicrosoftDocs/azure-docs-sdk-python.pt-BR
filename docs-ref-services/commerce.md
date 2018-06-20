@@ -1,7 +1,7 @@
 ---
-title: "Bibliotecas de Comércio do Azure para Python"
-description: "Referência para bibliotecas de Comércio do Azure para Python"
-keywords: "Azure, Python, SDK, API, Comércio"
+title: Bibliotecas de Comércio do Azure para Python
+description: Referência para bibliotecas de Comércio do Azure para Python
+keywords: Azure, Python, SDK, API, Comércio
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -16,6 +16,7 @@ ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/24/2018
+ms.locfileid: "29551599"
 ---
 # <a name="azure-commerce-libraries-for-python"></a>Bibliotecas de Comércio do Azure para Python
 

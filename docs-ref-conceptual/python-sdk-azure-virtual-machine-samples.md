@@ -1,7 +1,7 @@
 ---
-title: "Bibliotecas de gerenciamento do Azure para exemplos de máquina virtual de Python"
-description: "Obter o exemplo de código para criação e atualização de máquinas virtuais do Azure usando as bibliotecas de gerenciamento do Azure para Python"
-keywords: "Azure, Python, SDK, API, máquinas virtuais"
+title: Bibliotecas de gerenciamento do Azure para exemplos de máquina virtual de Python
+description: Obter o exemplo de código para criação e atualização de máquinas virtuais do Azure usando as bibliotecas de gerenciamento do Azure para Python
+keywords: Azure, Python, SDK, API, máquinas virtuais
 author: lisawong19
 ms.author: liwong
 manager: douge
@@ -10,12 +10,13 @@ ms.topic: article
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.assetid: 
+ms.assetid: ''
 ms.openlocfilehash: 0222632b0d65395e00f64f07806b03ddab4f8222
 ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 08/18/2017
+ms.locfileid: "20909259"
 ---
 # <a name="azure-management-libraries-for-python-samples-for-virtual-machines"></a>Bibliotecas de gerenciamento do Azure para exemplos de Python para máquinas virtuais
 

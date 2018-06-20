@@ -1,7 +1,7 @@
 ---
-title: "Bibliotecas de Registro de Contêiner do Azure para Python"
-description: "Referência para bibliotecas de Registro de Contêiner do Azure para Python"
-keywords: "Azure, Python, SDK, API, Registro de Contêiner"
+title: Bibliotecas de Registro de Contêiner do Azure para Python
+description: Referência para bibliotecas de Registro de Contêiner do Azure para Python
+keywords: Azure, Python, SDK, API, Registro de Contêiner
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479119"
 ---
 # <a name="azure-container-registry-libraries-for-python"></a>Bibliotecas de Registro de Contêiner do Azure para Python
 
