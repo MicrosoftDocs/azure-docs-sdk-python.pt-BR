@@ -13,6 +13,7 @@ ms.sourcegitcommit: 7066ace94076483bae7d54172605f431e47bd5ee
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 04/05/2018
+ms.locfileid: "30820120"
 ---
 # <a name="multi-cloud---use-azure-on-all-regions"></a><span data-ttu-id="60795-103">Uso de várias nuvens no Azure em todas as regiões</span><span class="sxs-lookup"><span data-stu-id="60795-103">Multi-cloud - use Azure on all regions</span></span>
 

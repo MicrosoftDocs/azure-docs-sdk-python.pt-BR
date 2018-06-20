@@ -1,12 +1,12 @@
 ### YamlMime:Tutorial
-title: "<span data-ttu-id=\"45d3e-101\">Introdução ao desenvolvimento em nuvem usando as bibliotecas do Azure para Python</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-101\">Get started with cloud development using the Azure libraries for Python</span></span>"
+title: <span data-ttu-id="45d3e-101">Introdução ao desenvolvimento em nuvem usando as bibliotecas do Azure para Python</span><span class="sxs-lookup"><span data-stu-id="45d3e-101">Get started with cloud development using the Azure libraries for Python</span></span>
 metadata:
-  title: "Introdução às bibliotecas do Azure para Python"
-  description: "Saiba como criar os recursos de nuvem do Azure, conectá-los e usá-los em seus aplicativos do python."
+  title: Introdução às bibliotecas do Azure para Python
+  description: Saiba como criar os recursos de nuvem do Azure, conectá-los e usá-los em seus aplicativos do python.
   audience: Developer
   level: Beginner
   nextTutorialHref: /python/api/overview/azure/?view=azure-python
-  nextTutorialTitle: "<span data-ttu-id=\"45d3e-104\">referência de SDK do python</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-104\">python SDK reference</span></span>"
+  nextTutorialTitle: <span data-ttu-id="45d3e-104">referência de SDK do python</span><span class="sxs-lookup"><span data-stu-id="45d3e-104">python SDK reference</span></span>
   displayType: two-column
   interactive: azurecli
   ms.openlocfilehash: 23e29f3a4fde678e6b8973f3f7baca0f2afb1cde
@@ -14,22 +14,259 @@ metadata:
   ms.translationtype: HT
   ms.contentlocale: pt-BR
   ms.lasthandoff: 01/18/2018
+  ms.locfileid: "27907926"
 items:
 - durationInMinutes: 1
   content: "<span data-ttu-id=\"45d3e-105\">Este guia demonstra o uso de várias bibliotecas do Azure para Python.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-105\">This guide demonstrates the usage of several Azure libraries for Python.</span></span>  \n"
-- title: "<span data-ttu-id=\"45d3e-106\">pré-requisitos</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-106\">Prerequisites</span></span>"
+- title: <span data-ttu-id="45d3e-106">pré-requisitos</span><span class="sxs-lookup"><span data-stu-id="45d3e-106">Prerequisites</span></span>
   durationInMinutes: 5
-  content: "- <span data-ttu-id=\"45d3e-107\">Uma conta do Azure.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-107\">An Azure account.</span></span> <span data-ttu-id=\"45d3e-108\">Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/).</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-108\">If you don't have one, [get a free trial](https://azure.microsoft.com/free/).</span></span>\n- [<span data-ttu-id=\"45d3e-109\">Python</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-109\">Python</span></span>](https://www.python.org/downloads/)\n- <span data-ttu-id=\"45d3e-110\">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) ou [CLI do Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-110\">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>\n"
-- title: "<span data-ttu-id=\"45d3e-111\">Configurar a autenticação</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-111\">Set up authentication</span></span>"
+  content: >
+    - <span data-ttu-id="45d3e-107">Uma conta do Azure.</span><span class="sxs-lookup"><span data-stu-id="45d3e-107">An Azure account.</span></span> <span data-ttu-id="45d3e-108">Se você não tiver uma, [obtenha uma avaliação gratuita](https://azure.microsoft.com/free/).</span><span class="sxs-lookup"><span data-stu-id="45d3e-108">If you don't have one, [get a free trial](https://azure.microsoft.com/free/).</span></span>
+
+    - [<span data-ttu-id="45d3e-109">Python</span><span class="sxs-lookup"><span data-stu-id="45d3e-109">Python</span></span>](https://www.python.org/downloads/)
+
+    - <span data-ttu-id="45d3e-110">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) ou [CLI do Azure 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span><span class="sxs-lookup"><span data-stu-id="45d3e-110">[Azure Cloud Shell](https://docs.microsoft.com/azure/cloud-shell/quickstart) or [Azure CLI 2.0](https://docs.microsoft.com/cli/azure/install-az-cli2).</span></span>
+- title: <span data-ttu-id="45d3e-111">Configurar a autenticação</span><span class="sxs-lookup"><span data-stu-id="45d3e-111">Set up authentication</span></span>
   durationInMinutes: 5
-  content: "> [!IMPORTANT]\n> <span data-ttu-id=\"45d3e-112\">Isso deve ser usado como a experiência de início rápido do desenvolvedor.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-112\">This should be used as quick start developer experience.</span></span> <span data-ttu-id=\"45d3e-113\">Para fins de produção, use [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) ou o seu próprio sistema de credenciais.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-113\">For production purposes, use [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) or your own credentials system.</span></span>\n> <span data-ttu-id=\"45d3e-114\">Qualquer alteração em sua configuração de CLI terá impacto sobre a execução do SDK.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-114\">Any change to your CLI configuration will impact the SDK execution.</span></span>\n\n<span data-ttu-id=\"45d3e-115\">O SDK é capaz de criar um cliente usando a sua assinatura ativa da CLI.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-115\">The SDK is able to create a client using your CLI active subscription.</span></span>\n\n<span data-ttu-id=\"45d3e-116\">Para definir as credenciais ativas, use [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-116\">To define active credentials, use [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).</span></span>\n<span data-ttu-id=\"45d3e-117\">A ID de assinatura padrão é a única que você tem, ou você pode defini-la usando [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli).</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-117\">Default subscription ID is either the only one you have, or you can define it using [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli).</span></span>\n\n```python\nfrom azure.common.client_factory import get_client_from_cli_profile\nfrom azure.mgmt.compute import ComputeManagementClient\n\nclient = get_client_from_cli_profile(ComputeManagementClient)\n```\n"
+  content: >
+    > [!IMPORTANT]
+
+    > <span data-ttu-id="45d3e-112">Isso deve ser usado como a experiência de início rápido do desenvolvedor.</span><span class="sxs-lookup"><span data-stu-id="45d3e-112">This should be used as quick start developer experience.</span></span> <span data-ttu-id="45d3e-113">Para fins de produção, use [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) ou o seu próprio sistema de credenciais.</span><span class="sxs-lookup"><span data-stu-id="45d3e-113">For production purposes, use [ADAL](https://github.com/AzureAD/azure-activedirectory-library-for-python) or your own credentials system.</span></span>
+
+    > <span data-ttu-id="45d3e-114">Qualquer alteração em sua configuração de CLI terá impacto sobre a execução do SDK.</span><span class="sxs-lookup"><span data-stu-id="45d3e-114">Any change to your CLI configuration will impact the SDK execution.</span></span>
+
+
+    <span data-ttu-id="45d3e-115">O SDK é capaz de criar um cliente usando a sua assinatura ativa da CLI.</span><span class="sxs-lookup"><span data-stu-id="45d3e-115">The SDK is able to create a client using your CLI active subscription.</span></span>
+
+
+    <span data-ttu-id="45d3e-116">Para definir as credenciais ativas, use [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).</span><span class="sxs-lookup"><span data-stu-id="45d3e-116">To define active credentials, use [az login](https://docs.microsoft.com/cli/azure/authenticate-azure-cli).</span></span>
+
+    <span data-ttu-id="45d3e-117">A ID de assinatura padrão é a única que você tem, ou você pode defini-la usando [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli).</span><span class="sxs-lookup"><span data-stu-id="45d3e-117">Default subscription ID is either the only one you have, or you can define it using [az account](https://docs.microsoft.com/cli/azure/manage-azure-subscriptions-azure-cli).</span></span>
+
+
+    ```python
+
+    from azure.common.client_factory import get_client_from_cli_profile
+
+    from azure.mgmt.compute import ComputeManagementClient
+
+
+    client = get_client_from_cli_profile(ComputeManagementClient)
+
+    ```
 - title: <span data-ttu-id="45d3e-118">Criar um ambiente virtual</span><span class="sxs-lookup"><span data-stu-id="45d3e-118">Create a virtual environment</span></span>
   durationInMinutes: 5
-  content: "> [!IMPORTANT]\n> <span data-ttu-id=\"45d3e-119\">Criar uma ambiente virtual é opcional, mas é altamente recomendável fazer isso.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-119\">Create a virtual environment is optional, but we strongly suggest you to do it.</span></span>\n\n<span data-ttu-id=\"45d3e-120\">Criar um ambiente virtual em Bash (Linux ou [Bash para Windows](https://msdn.microsoft.com/commandline/wsl/about)):</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-120\">Create a virtual environment in Bash (Linux or [Bash for Windows](https://msdn.microsoft.com/commandline/wsl/about)):</span></span>\n```bash\npip install virtualenv\nvirtualenv mytestenv\ncd mytestenv\nsource ./bin/activate\n```\n\n<span data-ttu-id=\"45d3e-121\">Criar um ambiente virtual no PowerShell:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-121\">Create a virtual environment in PowerShell:</span></span>\n```powershell\npip install virtualenv\nvirtualenv mytestenv\ncd mytestenv\n.\\Scripts\\activate\n```\n"
-- title: "<span data-ttu-id=\"45d3e-122\">Criar uma máquina virtual Linux</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-122\">Create a Linux virtual machine</span></span>"
+  content: >
+    > [!IMPORTANT]
+
+    > <span data-ttu-id="45d3e-119">Criar uma ambiente virtual é opcional, mas é altamente recomendável fazer isso.</span><span class="sxs-lookup"><span data-stu-id="45d3e-119">Create a virtual environment is optional, but we strongly suggest you to do it.</span></span>
+
+
+    <span data-ttu-id="45d3e-120">Criar um ambiente virtual em Bash (Linux ou [Bash para Windows](https://msdn.microsoft.com/commandline/wsl/about)):</span><span class="sxs-lookup"><span data-stu-id="45d3e-120">Create a virtual environment in Bash (Linux or [Bash for Windows](https://msdn.microsoft.com/commandline/wsl/about)):</span></span>
+
+    ```bash
+
+    pip install virtualenv
+
+    virtualenv mytestenv
+
+    cd mytestenv
+
+    source ./bin/activate
+
+    ```
+
+
+    <span data-ttu-id="45d3e-121">Criar um ambiente virtual no PowerShell:</span><span class="sxs-lookup"><span data-stu-id="45d3e-121">Create a virtual environment in PowerShell:</span></span>
+
+    ```powershell
+
+    pip install virtualenv
+
+    virtualenv mytestenv
+
+    cd mytestenv
+
+    .\Scripts\activate
+
+    ```
+- title: <span data-ttu-id="45d3e-122">Criar uma máquina virtual Linux</span><span class="sxs-lookup"><span data-stu-id="45d3e-122">Create a Linux virtual machine</span></span>
   durationInMinutes: 5
-  content: "<span data-ttu-id=\"45d3e-123\">Esse código cria uma nova VM do Linux com o nome `testLinuxVM` em um grupo de recursos `sampleVmResourceGroup` em execução na região Leste dos EUA do Azure.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-123\">This code creates a new Linux VM with name `testLinuxVM` in a resource group `sampleVmResourceGroup` running in the US East Azure region.</span></span>\n\n<span data-ttu-id=\"45d3e-124\">Autenticar:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-124\">Authenticate:</span></span>\n```azcli\naz login\n```\n<span data-ttu-id=\"45d3e-125\">Crie um grupo de recursos:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-125\">Create a resource group:</span></span>\n```azurecli-interactive\naz group create -l eastus --n sampleVmResourceGroup\n```\n\n<span data-ttu-id=\"45d3e-126\">Criar a rede virtual e a sub-rede:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-126\">Create a virtual network and subnet:</span></span>\n```azurecli-interactive\naz network vnet create -g sampleVmResourceGroup -n azure-sample-vnet --address-prefix 10.0.0.0/16 --subnet-name azure-sample-subnet --subnet-prefix 10.0.0.0/24\n```\n\n<span data-ttu-id=\"45d3e-127\">Criar um endereço IP público:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-127\">Create a public IP address:</span></span>\n```azurecli-interactive\naz network public-ip create -g sampleVmResourceGroup -n azure-sample-ip --allocation-method Dynamic --version IPv6\n```\n<span data-ttu-id=\"45d3e-128\">Criar um cliente de interface de rede:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-128\">Create a network interface client:</span></span>\n```azurecli-interactive\naz network nic create -g sampleVmResourceGroup --vnet-name azure-sample-vnet --subnet azure-sample-subnet -n azure-sample-nic --public-ip-address azure-sample-ip\n```\n\n```python\nfrom azure.mgmt.network import NetworkManagementClient\nfrom azure.mgmt.compute import ComputeManagementClient\nfrom azure.common.client_factory import get_client_from_cli_profile\n\n# Azure Datacenter\nLOCATION = 'eastus'\n\n# Resource Group\nGROUP_NAME = 'sampleVmResourceGroup'\n\n# Network\nVNET_NAME = 'azure-sample-vnet'\nSUBNET_NAME = 'azure-sample-subnet'\n\n# VM\nNIC_NAME = 'azure-sample-nic'\nVM_NAME = 'testLinuxVM'\n\nUSERNAME = 'userlogin'\nPASSWORD = 'Pa$$w0rd91'\n\nIP_ADDRESS_NAME='azure-sample-ip'\n\nVM_REFERENCE = {\n    'linux': {\n        'publisher': 'Canonical',\n        'offer': 'UbuntuServer',\n        'sku': '16.04.0-LTS',\n        'version': 'latest'\n    },\n    'windows': {\n        'publisher': 'MicrosoftWindowsServerEssentials',\n        'offer': 'WindowsServerEssentials',\n        'sku': 'WindowsServerEssentials',\n        'version': 'latest'\n    }\n}\n\n\ndef run_example():\n\n    compute_client = get_client_from_cli_profile(ComputeManagementClient)\n    network_client = get_client_from_cli_profile(NetworkManagementClient)\n\n    # get nic id\n    nic = network_client.network_interfaces.get(GROUP_NAME, NIC_NAME)\n\n    # Create Linux VM\n    print('\\nCreating Linux Virtual Machine')\n    vm_parameters = create_vm_parameters(nic.id, VM_REFERENCE['linux'])\n    print(vm_parameters)\n    async_vm_creation = compute_client.virtual_machines.create_or_update(\n        GROUP_NAME, VM_NAME, vm_parameters)\n    async_vm_creation.wait()\n\n\ndef create_vm_parameters(nic_id, vm_reference):\n    \"\"\"Create the VM parameters structure.\n    \"\"\"\n    return {\n        'location': LOCATION,\n        'os_profile': {\n            'computer_name': VM_NAME,\n            'admin_username': USERNAME,\n            'admin_password': PASSWORD\n        },\n        'hardware_profile': {\n            'vm_size': 'Standard_DS1_v2'\n        },\n        'storage_profile': {\n            'image_reference': {\n                'publisher': vm_reference['publisher'],\n                'offer': vm_reference['offer'],\n                'sku': vm_reference['sku'],\n                'version': vm_reference['version']\n            },\n        },\n        'network_profile': {\n            'network_interfaces': [{\n                'id': nic_id,\n            }]\n        },\n    }\n\n\nif __name__ == \"__main__\":\n    run_example()\n```\n\n<span data-ttu-id=\"45d3e-129\">Quando o programa for concluído, verifique se a máquina virtual em sua assinatura com a CLI do Azure 2.0:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-129\">When the program finishes, verify the virtual machine in your subscription with the Azure CLI 2.0:</span></span>\n\n```azurecli-interactive\naz vm list --resource-group sampleVmResourceGroup\n```\n\n<span data-ttu-id=\"45d3e-130\">Depois de verificar se o código funcionou, use a CLI para excluir a VM e seus recursos.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-130\">Once you've verified that the code worked, use the CLI to delete the VM and its resources.</span></span>\n\n```azurecli-interactive\naz group delete --name sampleVmResourceGroup\n```\n"
-- title: "<span data-ttu-id=\"45d3e-131\">Implantar um aplicativo Web a partir de um repositório GitHub</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-131\">Deploy a web app from a GitHub repo</span></span>"
+  content: >
+    <span data-ttu-id="45d3e-123">Esse código cria uma nova VM do Linux com o nome `testLinuxVM` em um grupo de recursos `sampleVmResourceGroup` em execução na região Leste dos EUA do Azure.</span><span class="sxs-lookup"><span data-stu-id="45d3e-123">This code creates a new Linux VM with name `testLinuxVM` in a resource group `sampleVmResourceGroup` running in the US East Azure region.</span></span>
+
+
+    <span data-ttu-id="45d3e-124">Autenticar:</span><span class="sxs-lookup"><span data-stu-id="45d3e-124">Authenticate:</span></span>
+
+    ```azcli
+
+    az login
+
+    ```
+
+    <span data-ttu-id="45d3e-125">Crie um grupo de recursos:</span><span class="sxs-lookup"><span data-stu-id="45d3e-125">Create a resource group:</span></span>
+
+    ```azurecli-interactive
+
+    az group create -l eastus --n sampleVmResourceGroup
+
+    ```
+
+
+    <span data-ttu-id="45d3e-126">Criar a rede virtual e a sub-rede:</span><span class="sxs-lookup"><span data-stu-id="45d3e-126">Create a virtual network and subnet:</span></span>
+
+    ```azurecli-interactive
+
+    az network vnet create -g sampleVmResourceGroup -n azure-sample-vnet --address-prefix 10.0.0.0/16 --subnet-name azure-sample-subnet --subnet-prefix 10.0.0.0/24
+
+    ```
+
+
+    <span data-ttu-id="45d3e-127">Criar um endereço IP público:</span><span class="sxs-lookup"><span data-stu-id="45d3e-127">Create a public IP address:</span></span>
+
+    ```azurecli-interactive
+
+    az network public-ip create -g sampleVmResourceGroup -n azure-sample-ip --allocation-method Dynamic --version IPv6
+
+    ```
+
+    <span data-ttu-id="45d3e-128">Criar um cliente de interface de rede:</span><span class="sxs-lookup"><span data-stu-id="45d3e-128">Create a network interface client:</span></span>
+
+    ```azurecli-interactive
+
+    az network nic create -g sampleVmResourceGroup --vnet-name azure-sample-vnet --subnet azure-sample-subnet -n azure-sample-nic --public-ip-address azure-sample-ip
+
+    ```
+
+
+    ```python
+
+    from azure.mgmt.network import NetworkManagementClient
+
+    from azure.mgmt.compute import ComputeManagementClient
+
+    from azure.common.client_factory import get_client_from_cli_profile
+
+
+    # Azure Datacenter
+
+    LOCATION = 'eastus'
+
+
+    # Resource Group
+
+    GROUP_NAME = 'sampleVmResourceGroup'
+
+
+    # Network
+
+    VNET_NAME = 'azure-sample-vnet'
+
+    SUBNET_NAME = 'azure-sample-subnet'
+
+
+    # VM
+
+    NIC_NAME = 'azure-sample-nic'
+
+    VM_NAME = 'testLinuxVM'
+
+
+    USERNAME = 'userlogin'
+
+    PASSWORD = 'Pa$$w0rd91'
+
+
+    IP_ADDRESS_NAME='azure-sample-ip'
+
+
+    VM_REFERENCE = {
+        'linux': {
+            'publisher': 'Canonical',
+            'offer': 'UbuntuServer',
+            'sku': '16.04.0-LTS',
+            'version': 'latest'
+        },
+        'windows': {
+            'publisher': 'MicrosoftWindowsServerEssentials',
+            'offer': 'WindowsServerEssentials',
+            'sku': 'WindowsServerEssentials',
+            'version': 'latest'
+        }
+    }
+
+
+
+    def run_example():
+
+        compute_client = get_client_from_cli_profile(ComputeManagementClient)
+        network_client = get_client_from_cli_profile(NetworkManagementClient)
+
+        # get nic id
+        nic = network_client.network_interfaces.get(GROUP_NAME, NIC_NAME)
+
+        # Create Linux VM
+        print('\nCreating Linux Virtual Machine')
+        vm_parameters = create_vm_parameters(nic.id, VM_REFERENCE['linux'])
+        print(vm_parameters)
+        async_vm_creation = compute_client.virtual_machines.create_or_update(
+            GROUP_NAME, VM_NAME, vm_parameters)
+        async_vm_creation.wait()
+
+
+    def create_vm_parameters(nic_id, vm_reference):
+        """Create the VM parameters structure.
+        """
+        return {
+            'location': LOCATION,
+            'os_profile': {
+                'computer_name': VM_NAME,
+                'admin_username': USERNAME,
+                'admin_password': PASSWORD
+            },
+            'hardware_profile': {
+                'vm_size': 'Standard_DS1_v2'
+            },
+            'storage_profile': {
+                'image_reference': {
+                    'publisher': vm_reference['publisher'],
+                    'offer': vm_reference['offer'],
+                    'sku': vm_reference['sku'],
+                    'version': vm_reference['version']
+                },
+            },
+            'network_profile': {
+                'network_interfaces': [{
+                    'id': nic_id,
+                }]
+            },
+        }
+
+
+    if __name__ == "__main__":
+        run_example()
+    ```
+
+
+    <span data-ttu-id="45d3e-129">Quando o programa for concluído, verifique se a máquina virtual em sua assinatura com a CLI do Azure 2.0:</span><span class="sxs-lookup"><span data-stu-id="45d3e-129">When the program finishes, verify the virtual machine in your subscription with the Azure CLI 2.0:</span></span>
+
+
+    ```azurecli-interactive
+
+    az vm list --resource-group sampleVmResourceGroup
+
+    ```
+
+
+    <span data-ttu-id="45d3e-130">Depois de verificar se o código funcionou, use a CLI para excluir a VM e seus recursos.</span><span class="sxs-lookup"><span data-stu-id="45d3e-130">Once you've verified that the code worked, use the CLI to delete the VM and its resources.</span></span>
+
+
+    ```azurecli-interactive
+
+    az group delete --name sampleVmResourceGroup
+
+    ```
+- title: <span data-ttu-id="45d3e-131">Implantar um aplicativo Web a partir de um repositório GitHub</span><span class="sxs-lookup"><span data-stu-id="45d3e-131">Deploy a web app from a GitHub repo</span></span>
   durationInMinutes: 5
   content: "<span data-ttu-id=\"45d3e-132\">Esse código implanta um aplicativo Web Flask a partir da ramificação `master` em um repositório GitHub público em um novo [Aplicativo Web do Serviço de Aplicativo do Azure](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) em execução na camada gratuita.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-132\">This code deploys a Flask web application from the `master` branch in a GitHub repo in to a new [Azure App Service Web App](https://docs.microsoft.com/azure/app-service-web/app-service-web-overview) running in the free tier.</span></span> \n\n<span data-ttu-id=\"45d3e-133\">Antes de começar: Fork https://github.com/Azure-Samples/python-docs-hello-world</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-133\">Before you begin: Fork https://github.com/Azure-Samples/python-docs-hello-world</span></span>\n\n<span data-ttu-id=\"45d3e-134\">Autenticar:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-134\">Authenticate:</span></span>\n```azcli\naz login\n```\n<span data-ttu-id=\"45d3e-135\">Crie um grupo de recursos:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-135\">Create a resource group:</span></span>\n```azurecli-interactive\naz group create -l eastus -n sampleWebResourceGroup\n```\n\n<span data-ttu-id=\"45d3e-136\">Criar um plano do serviço de aplicativo gratuito:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-136\">Create a free app service plan:</span></span>\n```azurecli-interactive\naz appservice plan create -g sampleWebResourceGroup -n sampleFreePlan  --sku Free\n```\n\n```python\nfrom azure.mgmt.web import WebSiteManagementClient\nfrom azure.mgmt.web.models import Site, SiteSourceControl, SiteConfig\nfrom azure.common.client_factory import get_client_from_cli_profile\n\nRESOURCE_GROUP_NAME = 'sampleWebResourceGroup'\nSERVICE_PLAN_NAME = 'sampleFreePlanName'\nWEB_APP_NAME = 'sampleflaskapp123'\nREPO_URL = 'GitHub_Repository_URL'\n\n#log in\nweb_client = get_client_from_cli_profile(WebSiteManagementClient)\n\n# get service plan id\nservice_plan = web_client.app_service_plans.get(RESOURCE_GROUP_NAME, SERVICE_PLAN_NAME)\n\n# create a web app\nsiteConfiguration = SiteConfig(\n    python_version='3.4',\n)\nsite_async_operation = web_client.web_apps.create_or_update(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    Site(\n        location='eastus',\n        server_farm_id=service_plan.id,\n        site_config=siteConfiguration\n    ),\n)\n\nsite = site_async_operation.result()\nprint('created webapp: ' + site.default_host_name)\n\n# continuous deployment with GitHub\nsource_control_async_operation = web_client.web_apps.create_or_update_source_control(\n    RESOURCE_GROUP_NAME,\n    WEB_APP_NAME,\n    SiteSourceControl(\n        location='GitHub',\n        repo_url= REPO_URL,\n        branch='master'\n    )\n)\n\nsource_control = source_control_async_operation.result()\nprint(\"added source control to: \" + source_control.name + \"azurewebsites.net\")\n```\n\n<span data-ttu-id=\"45d3e-137\">Abra um navegador apontado para o aplicativo usando a CLI:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-137\">Open a browser pointed to the application using the CLI:</span></span>\n```azurecli-interactive\naz appservice web browse --resource-group sampleWebResourceGroup --name YOUR_APP_NAME\n```\n\n<span data-ttu-id=\"45d3e-138\">Remova o aplicativo Web e o plano da sua assinatura depois de verificar a implantação.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-138\">Remove the web app and plan from your subscription once you've verified the deployment.</span></span> \n```azurecli-interactive\naz group delete --name sampleWebResourceGroup\n```\n"
 - title: <span data-ttu-id="45d3e-139">Conectar-se a um Banco de Dados SQL</span><span class="sxs-lookup"><span data-stu-id="45d3e-139">Connect to a SQL database</span></span>
@@ -38,5 +275,12 @@ items:
 - title: <span data-ttu-id="45d3e-148">Gravar um blob em uma nova conta de armazenamento</span><span class="sxs-lookup"><span data-stu-id="45d3e-148">Write a blob into a new storage account</span></span>
   durationInMinutes: 5
   content: "<span data-ttu-id=\"45d3e-149\">Autenticar:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-149\">Authenticate:</span></span>\n```azcli\naz login\n```\n<span data-ttu-id=\"45d3e-150\">Crie um grupo de recursos:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-150\">Create a resource group:</span></span>\n```azurecli-interactive\naz group create -l eastus -n sampleStorageResourceGroup\n```\n\n<span data-ttu-id=\"45d3e-151\">Criar uma conta de armazenamento:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-151\">Create a storage account:</span></span>\n```azurecli-interactive\naz storage account create -n samplestorageaccountname -g sampleStorageResourceGroup -l eastus --sku Standard_RAGRS\n```\n\n<span data-ttu-id=\"45d3e-152\">Esse código cria uma [conta de armazenamento do Azure](https://docs.microsoft.com/azure/storage/storage-introduction) e, em seguida, usa as bibliotecas de Armazenamento do Azure para Python para criar um novo arquivo HTML na nuvem.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-152\">This code creates an [Azure storage account](https://docs.microsoft.com/azure/storage/storage-introduction) and then uses the Azure Storage libraries for Python to create a new html file in the cloud.</span></span> \n```python\nfrom azure.storage import CloudStorageAccount\nfrom azure.storage.blob import PublicAccess\nfrom azure.storage.blob.models import ContentSettings\nfrom azure.common.client_factory import get_client_from_cli_profile\nfrom azure.mgmt.storage import StorageManagementClient\n\nRESOURCE_GROUP = 'sampleStorageResourceGroup'\nSTORAGE_ACCOUNT_NAME = 'samplestorageaccountname'\nCONTAINER_NAME = 'samplecontainername'\n\n# log in\nstorage_client = get_client_from_cli_profile(StorageManagementClient)\n\n# create a public storage container to hold the file\nstorage_keys = storage_client.storage_accounts.list_keys(RESOURCE_GROUP, STORAGE_ACCOUNT_NAME)\nstorage_keys = {v.key_name: v.value for v in storage_keys.keys}\n\nstorage_client = CloudStorageAccount(STORAGE_ACCOUNT_NAME, storage_keys['key1'])\nblob_service = storage_client.create_block_blob_service()\n\nblob_service.create_container(CONTAINER_NAME, public_access=PublicAccess.Container)\n\nblob_service.create_blob_from_bytes(\n    CONTAINER_NAME,\n    'helloworld.html',\n    b'<center><h1>Hello World!</h1></center>',\n    content_settings=ContentSettings('text/html')\n)\n\nprint(blob_service.make_blob_url(CONTAINER_NAME, 'helloworld.html'))\n```\n<span data-ttu-id=\"45d3e-153\">Para verificar se o conteúdo foi carregado com êxito, navegue até a URL impressa.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-153\">To verify content successfully uploaded, navigate to the URL printed.</span></span> \n\n<span data-ttu-id=\"45d3e-154\">Limpar a conta de armazenamento usando a CLI:</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-154\">Clean up the storage account using the CLI:</span></span>\n```azurecli-interactive\naz group delete --name sampleStorageResourceGroup\n```\n"
-- title: "<span data-ttu-id=\"45d3e-155\">Próximas etapas</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-155\">Next Steps</span></span>"
-  content: "<span data-ttu-id=\"45d3e-156\">Você concluiu a \"Introdução às bibliotecas do Azure para python\".</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-156\">You've completed \"Getting started with Azure libraries for python\".</span></span>\n\n- <span data-ttu-id=\"45d3e-157\">Para saber mais sobre como usar as bibliotecas de gerenciamento do Azure para Python para gerenciar recursos e automatizar tarefas, confira o nosso exemplo de código para [máquinas virtuais](python-sdk-azure-web-apps-samples.md), [aplicativos Web](python-sdk-azure-web-apps-samples.md) e [banco de dados SQL](python-sdk-azure-sql-database-samples.md) .</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-157\">To learn more about how to use the Azure management libraries for Python to manage resources and automate tasks, see our sample code for [virtual machines](python-sdk-azure-web-apps-samples.md), [web apps](python-sdk-azure-web-apps-samples.md) and [SQL database](python-sdk-azure-sql-database-samples.md).</span></span>\n\n- <span data-ttu-id=\"45d3e-158\">Uma [referência](/python/api/overview/azure/?view=azure-python) está disponível para todos os pacotes.</span><span class=\"sxs-lookup\"><span data-stu-id=\"45d3e-158\">A [reference](/python/api/overview/azure/?view=azure-python) is available for all packages.</span></span>\0"
+- title: <span data-ttu-id="45d3e-155">Próximas etapas</span><span class="sxs-lookup"><span data-stu-id="45d3e-155">Next Steps</span></span>
+  content: >-
+    <span data-ttu-id="45d3e-156">Você concluiu a "Introdução às bibliotecas do Azure para python".</span><span class="sxs-lookup"><span data-stu-id="45d3e-156">You've completed "Getting started with Azure libraries for python".</span></span>
+
+
+    - <span data-ttu-id="45d3e-157">Para saber mais sobre como usar as bibliotecas de gerenciamento do Azure para Python para gerenciar recursos e automatizar tarefas, confira o nosso exemplo de código para [máquinas virtuais](python-sdk-azure-web-apps-samples.md), [aplicativos Web](python-sdk-azure-web-apps-samples.md) e [banco de dados SQL](python-sdk-azure-sql-database-samples.md) .</span><span class="sxs-lookup"><span data-stu-id="45d3e-157">To learn more about how to use the Azure management libraries for Python to manage resources and automate tasks, see our sample code for [virtual machines](python-sdk-azure-web-apps-samples.md), [web apps](python-sdk-azure-web-apps-samples.md) and [SQL database](python-sdk-azure-sql-database-samples.md).</span></span>
+
+
+    - <span data-ttu-id="45d3e-158">Uma [referência](/python/api/overview/azure/?view=azure-python) está disponível para todos os pacotes.</span><span class="sxs-lookup"><span data-stu-id="45d3e-158">A [reference](/python/api/overview/azure/?view=azure-python) is available for all packages.</span></span>

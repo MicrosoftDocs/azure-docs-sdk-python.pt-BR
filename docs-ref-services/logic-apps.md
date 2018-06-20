@@ -1,7 +1,7 @@
 ---
-title: "Bibliotecas de Aplicativos Lógicos do Azure para Python"
-description: "Referência para bibliotecas de Aplicativos Lógicos do Azure para Python"
-keywords: "Azure, Python, SDK, API, Aplicativos Lógicos"
+title: Bibliotecas de Aplicativos Lógicos do Azure para Python
+description: Referência para bibliotecas de Aplicativos Lógicos do Azure para Python
+keywords: Azure, Python, SDK, API, Aplicativos Lógicos
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478779"
 ---
 # <a name="azure-logic-apps-libraries-for-python"></a><span data-ttu-id="ab989-104">Bibliotecas de Aplicativos Lógicos do Azure para Python</span><span class="sxs-lookup"><span data-stu-id="ab989-104">Azure Logic Apps libraries for python</span></span>
 

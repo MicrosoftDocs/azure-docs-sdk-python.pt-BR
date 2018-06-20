@@ -1,7 +1,7 @@
 ---
-title: "Bibliotecas de Backup dos Serviços de Recuperação do Azure para Python"
-description: "Referência para bibliotecas de Backup dos Serviços de Recuperação do Azure para Python"
-keywords: "Azure, Python, SDK, API, Backup dos Serviços de Recuperação"
+title: Bibliotecas de Backup dos Serviços de Recuperação do Azure para Python
+description: Referência para bibliotecas de Backup dos Serviços de Recuperação do Azure para Python
+keywords: Azure, Python, SDK, API, Backup dos Serviços de Recuperação
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29479199"
 ---
 # <a name="azure-recovery-services-backup-libraries-for-python"></a><span data-ttu-id="9da9e-104">Bibliotecas de Backup dos Serviços de Recuperação do Azure para Python</span><span class="sxs-lookup"><span data-stu-id="9da9e-104">Azure Recovery Services Backup libraries for python</span></span>
 

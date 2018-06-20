@@ -1,6 +1,6 @@
 ---
-title: "Bibliotecas de Barramento de Serviço para Python"
-description: "Documentação de referência para as bibliotecas de gerenciamento e de cliente de Python para Barramento de Serviço"
+title: Bibliotecas de Barramento de Serviço para Python
+description: Documentação de referência para as bibliotecas de gerenciamento e de cliente de Python para Barramento de Serviço
 keywords: Azure, Python, SDK, API, sistema de mensagens, pubsub, pub-sub, agente de mensagens
 author: lisawong19
 ms.author: liwong
@@ -14,6 +14,7 @@ ms.sourcegitcommit: d7c26ac167cf6a6491358ac3153f268bc90e55e9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/24/2018
+ms.locfileid: "29551589"
 ---
 # <a name="service-bus-libraries-for-python"></a><span data-ttu-id="b7c54-104">Bibliotecas de Barramento de Serviço para Python</span><span class="sxs-lookup"><span data-stu-id="b7c54-104">Service Bus libraries for Python</span></span>
 

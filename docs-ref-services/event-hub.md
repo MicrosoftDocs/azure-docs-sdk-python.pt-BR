@@ -1,6 +1,6 @@
 ---
 title: Bibliotecas de Hubs de Eventos do Azure para Python
-description: "Referência para bibliotecas de Hubs de Eventos do Azure para Python"
+description: Referência para bibliotecas de Hubs de Eventos do Azure para Python
 keywords: Azure, Python, SDK, API, Hubs de Eventos
 author: sptramer
 ms.author: sttramer
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478789"
 ---
 # <a name="azure-event-hubs-libraries-for-python"></a><span data-ttu-id="afb76-104">Bibliotecas de Hubs de Eventos do Azure para Python</span><span class="sxs-lookup"><span data-stu-id="afb76-104">Azure Event Hubs libraries for python</span></span>
 

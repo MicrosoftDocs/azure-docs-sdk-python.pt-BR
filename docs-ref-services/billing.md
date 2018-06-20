@@ -1,7 +1,7 @@
 ---
-title: "Bibliotecas de Cobrança do Azure para Python"
-description: "Referência para bibliotecas de Cobrança do Azure para Python"
-keywords: "Azure, Python, SDK, API, Cobrança"
+title: Bibliotecas de Cobrança do Azure para Python
+description: Referência para bibliotecas de Cobrança do Azure para Python
+keywords: Azure, Python, SDK, API, Cobrança
 author: sptramer
 ms.author: sttramer
 manager: douge
@@ -16,6 +16,7 @@ ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
 ms.translationtype: HT
 ms.contentlocale: pt-BR
 ms.lasthandoff: 02/23/2018
+ms.locfileid: "29478869"
 ---
 # <a name="azure-billing-libraries-for-python"></a><span data-ttu-id="2485b-104">Bibliotecas de Cobrança do Azure para Python</span><span class="sxs-lookup"><span data-stu-id="2485b-104">Azure Billing libraries for python</span></span>
 
