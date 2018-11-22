@@ -11,19 +11,19 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: d924a8aea18d9b59ec8c78d85dce8fe0ce7c8d6c
-ms.sourcegitcommit: d521a7350216461eb2fa68152c4975f55152f831
+ms.openlocfilehash: f331a88ceac73449c9c1aff7bccbbaff4c4ba7be
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/06/2017
-ms.locfileid: "26327984"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52277373"
 ---
 # <a name="azure-resources-libraries-for-python"></a>Bibliotecas de recursos do Azure para Python
 
 ## <a name="overview"></a>Visão geral 
 Implantar, monitorar e gerenciar recursos em grupos com o [Azure Resource Manager](https://docs.microsoft.com/en-us/azure/azure-resource-manager/resource-group-overview).
 
-## <a name="management-api"></a>API de Gerenciamento
+## <a name="management-api"></a>API de gerenciamento
 Use a API de gerenciamento para criar grupos de recursos e implantar recursos de modelos.
 
 ```bash

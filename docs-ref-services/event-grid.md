@@ -7,16 +7,14 @@ ms.author: liwong
 manager: routlaw
 ms.date: 08/21/2017
 ms.topic: article
-ms.prod: azure
-ms.technology: azure
 ms.devlang: python
 ms.service: event-grid
-ms.openlocfilehash: e68504b3ba5834a145af1231eacc076e424a2256
-ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
+ms.openlocfilehash: bfaa1908295eb77531e399f1337acdeee512005f
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33901421"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52276830"
 ---
 # <a name="event-grid-libraries-for-python"></a>Bibliotecas da Grade de Eventos para Python
 
@@ -75,7 +73,7 @@ def publish_event(self):
 > [!div class="nextstepaction"]
 > [Explorar as APIs de cliente](/python/api/overview/azure/eventgrid/client)
 
-## <a name="management-sdk"></a>SDK de gerenciamento
+## <a name="management-sdk"></a>SDK de Gerenciamento
 
 Crie, atualize ou exclua instâncias da Grade de Eventos, tópicos e assinaturas com o SDK de gerenciamento.
 
