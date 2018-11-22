@@ -11,22 +11,22 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 920c79d9850d32bd612cfc5e8be686231fa1c4e8
-ms.sourcegitcommit: 41e90fe75de03d397079a276cdb388305290e27e
+ms.openlocfilehash: 97eff078b8fd5050ba932dc545a7777f7e83d2f7
+ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/23/2018
-ms.locfileid: "29479119"
+ms.lasthandoff: 11/21/2018
+ms.locfileid: "52273062"
 ---
-# <a name="azure-container-registry-libraries-for-python"></a><span data-ttu-id="5ec8d-104">Bibliotecas de Registro de Contêiner do Azure para Python</span><span class="sxs-lookup"><span data-stu-id="5ec8d-104">Azure Container Registry libraries for python</span></span>
+# <a name="azure-container-registry-libraries-for-python"></a><span data-ttu-id="64d68-104">Bibliotecas de Registro de Contêiner do Azure para Python</span><span class="sxs-lookup"><span data-stu-id="64d68-104">Azure Container Registry libraries for python</span></span>
 
-## <a name="install-the-libraries"></a><span data-ttu-id="5ec8d-105">Instalar as bibliotecas</span><span class="sxs-lookup"><span data-stu-id="5ec8d-105">Install the libraries</span></span>
+## <a name="install-the-libraries"></a><span data-ttu-id="64d68-105">Instalar as bibliotecas</span><span class="sxs-lookup"><span data-stu-id="64d68-105">Install the libraries</span></span>
 
 
-### <a name="management"></a><span data-ttu-id="5ec8d-106">Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="5ec8d-106">Management</span></span>
+### <a name="management"></a><span data-ttu-id="64d68-106">Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="64d68-106">Management</span></span>
 
 ```bash
 pip install azure-mgmt-containerregistry
 ```
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="5ec8d-107">Explorar as APIs de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="5ec8d-107">Explore the Management APIs</span></span>](/python/api/overview/azure/containerregistry/management)
+> [<span data-ttu-id="64d68-107">Explorar as APIs de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="64d68-107">Explore the Management APIs</span></span>](/python/api/overview/azure/containerregistry/management)
