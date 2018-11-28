@@ -1,3 +1,5 @@
-## Microsoft Open Source Code of Conduct
-This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/).
-For more information see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
+# <a name="azure-python-sdk-documentation"></a>Documentação do SDK do Python do Azure
+
+## <a name="microsoft-open-source-code-of-conduct"></a>Código de Conduta de Software Livre da Microsoft
+Este projeto adotou o [Código de Conduta Microsoft Open Source](https://opensource.microsoft.com/codeofconduct/).
+Para obter mais informações, confira as [Perguntas frequentes sobre o código de conduta](https://opensource.microsoft.com/codeofconduct/faq/) ou entre em contato com [opencode@microsoft.com](mailto:opencode@microsoft.com) para enviar outras perguntas ou comentários.
