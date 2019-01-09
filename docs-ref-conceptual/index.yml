@@ -1,10 +1,10 @@
 ### YamlMime:YamlDocument
-ms.openlocfilehash: b43b8597287347d3ae9d334f151b7e1514810321
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 71ea365465708f152d6fde7abab17c174d3e265b
+ms.sourcegitcommit: 7c81b382920ec76fd99a93a1ed0bc483765c1ae6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277128"
+ms.lasthandoff: 12/20/2018
+ms.locfileid: "53710897"
 documentType: LandingData
 title: Azure para desenvolvedores de Python
 metadata:
@@ -14,7 +14,7 @@ metadata:
   author: rloutlaw
   ms.author: routlaw
   manager: angerobe
-  ms.date: 07/09/2018
+  ms.date: 12/11/2018
   ms.topic: landing-page
   ms.prod: azure
   ms.technology: azure
@@ -56,17 +56,22 @@ sections:
         src: https://docs.microsoft.com/azure/media/index/app-service-web.svg
       title: Aplicativos Web
       html: <p>Compilar, implantar e dimensionar os aplicativos Web do Python no Linux</p>
-      href: https://docs.microsoft.com/en-us/azure/app-service/containers/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json
+      href: https://docs.microsoft.com/azure/app-service/containers/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
         src: https://docs.microsoft.com/media/logos/logo_kubernetes.svg
       title: Serviço de Kubernetes do Azure
       html: <p>Implantar e gerenciar aplicativos em contêiner</p>
       href: https://docs.microsoft.com/azure/aks/kubernetes-walkthrough?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
-        src: https://docs.microsoft.com/en-us/azure/virtual-machines/media/index/virtual-machines.svg
+        src: https://docs.microsoft.com/azure/virtual-machines/media/index/virtual-machines.svg
       title: Máquinas Virtuais
       html: <p>Usar uma distribuição Linux ou Windows Server para executar seu código em escala</p>
       href: https://docs.microsoft.com//azure/virtual-machines/linux/quick-create-cli?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/AzureFunctions.svg
+      title: Funções
+      html: <p>Criar uma função sem servidor do Python</p>
+      href: https://docs.microsoft.com/azure/azure-functions/functions-create-first-function-python?toc=%2Fpython%2Fazure%2FTOC.json
 - title: Soluções de dados
   items:
   - type: list
@@ -109,6 +114,11 @@ sections:
       title: Hadoop e Spark
       html: <p>Usar clusters de Hadoop e Spark gerenciados com o Azure HDInsights para grandes cargas de trabalho</p>
       href: https://docs.microsoft.com/azure/hdinsight/hadoop/apache-hadoop-linux-create-cluster-get-started-portal?toc=%2Fpython%2Fazure%2FTOC.json
+    - image:
+        src: https://docs.microsoft.com/azure/media/index/EventHubs.svg
+      title: Hubs de Eventos
+      html: <p>Desbloquear insights de dados usando ingestão de dados em tempo real simples, segura e escalonável</p>
+      href: https://docs.microsoft.com/azure/event-hubs/event-hubs-python?toc=%2Fpython%2Fazure%2FTOC.json
 - title: IA e Machine Learning
   items:
   - type: list
@@ -122,12 +132,12 @@ sections:
       html: <p>Criar aplicativos que são se dimensionam com inteligência, processam e agem nas informações</p>
       href: https://docs.microsoft.com/azure/machine-learning/desktop-workbench/tutorial-classifying-iris-part-1?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
-        src: https://docs.microsoft.com/en-us/python/azure/media/AzureNotebooks.png
+        src: https://docs.microsoft.com/python/azure/media/AzureNotebooks.png
       title: Azure Notebooks
       html: <p>Executar os experimentos de ciência de dados do Python usando um notebook do Jupyter totalmente gerenciado</p>
       href: https://notebooks.azure.com/
     - image:
-        src: https://docs.microsoft.com/en-us/azure/virtual-machines/media/index/virtual-machines.svg
+        src: https://docs.microsoft.com/azure/virtual-machines/media/index/virtual-machines.svg
       title: Máquina Virtual de Ciência de Dados
       html: <p>Usar um ambiente de ciência de dados sem atrito que contenha ferramentas populares para a ciência de dados</p>
       href: https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/dsvm-ubuntu-intro?toc=%2Fpython%2Fazure%2FTOC.json
@@ -142,7 +152,7 @@ sections:
         src: https://docs.microsoft.com/azure/media/index/KeyVault.svg
       title: Key Vault
       html: <p>Proteger as chaves criptográficas e os segredos usados pelos aplicativos e serviços na nuvem</p>
-      href: https://docs.microsoft.com/en-us/python/api/overview/azure/key-vault?toc=%2Fpython%2Fazure%2FTOC.json
+      href: https://docs.microsoft.com/python/api/overview/azure/key-vault?toc=%2Fpython%2Fazure%2FTOC.json
     - image:
         src: https://docs.microsoft.com/azure/media/index/ServiceBus.svg
       title: Barramento de Serviço
@@ -160,7 +170,7 @@ sections:
       image:
         src: https://docs.microsoft.com/media/logos/logo_vs-code.svg
       title: Visual Studio Code
-    - href: https://docs.microsoft.com/en-us/visualstudio/python/overview-of-python-tools-for-visual-studio?toc=%2Fpython%2Fazure%2FTOC.json
+    - href: https://docs.microsoft.com/visualstudio/python/overview-of-python-tools-for-visual-studio?toc=%2Fpython%2Fazure%2FTOC.json
       html: <p>IntelliSense, ferramentas de desenvolvimento, perfil e depuração para o Python</p>
       image:
         src: https://docs.microsoft.com/media/logos/logo_visual-studio.svg
@@ -170,8 +180,8 @@ sections:
       image:
         src: https://docs.microsoft.com/azure/media/index/azure_dev-7.svg
       title: CLI do Azure
-    - href: https://docs.microsoft.com/en-us/windows/wsl/install-win10?toc=%2Fpython%2Fazure%2FTOC.json
+    - href: https://docs.microsoft.com/windows/wsl/install-win10?toc=%2Fpython%2Fazure%2FTOC.json
       html: <p>Executar os aplicativos do Linux nativamente no Windows 10 usando várias distribuições com suporte</p>
       image:
-        src: https://docs.microsoft.com/en-us/media/logos/logo_linux-color.svg
+        src: https://docs.microsoft.com/media/logos/logo_linux-color.svg
       title: Subsistema do Windows para Linux
