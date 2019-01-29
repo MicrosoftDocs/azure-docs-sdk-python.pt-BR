@@ -7,12 +7,12 @@ ms.author: tyfox
 ms.date: 09/18/2018
 ms.topic: reference
 ms.devlang: python
-ms.openlocfilehash: 9447d50fd734bd9221accbf470a456210bb57a7f
-ms.sourcegitcommit: e2e4b1ecfac9804a72973477634128061c1ec990
+ms.openlocfilehash: 8d081739a3984e1cd3f7bbf31fcb44d63cfb6947
+ms.sourcegitcommit: fba77bdf8eb9f49621be94544d9fef88aff98c14
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/17/2018
-ms.locfileid: "53455103"
+ms.lasthandoff: 01/23/2019
+ms.locfileid: "54747706"
 ---
 # <a name="hdinsight-python-management-sdk-preview"></a>Versão Prévia do SDK de Gerenciamento do Python do HDInsight
 
@@ -272,7 +272,7 @@ client.clusters.list()
 client.clusters.list_by_resource_group("<Resource Group Name>")
 ```
 > [!NOTE]
-> Ambos `list()` e `list_by_resource_group()` retornam um objeto `ClusterPaged`. Chamar `advance_page()` retorna uma lista de clusters nessa página e avança o objeto `ClusterPaged` para a página seguinte. Isso pode ser repetido até uma exceção `StopIteration` ser gerada, indicando que não existem mais páginas.
+> Tanto `list()` quanto `list_by_resource_group()` retornam um objeto `ClusterPaged`. Chamar `advance_page()` retorna uma lista de clusters nessa página e avança o objeto `ClusterPaged` para a página seguinte. Isso pode ser repetido até uma exceção `StopIteration` ser gerada, indicando que não existem mais páginas.
 
 #### <a name="example"></a>Exemplo
 
