@@ -11,16 +11,17 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 792feac12f8328e2467017530065350e347c59b7
-ms.sourcegitcommit: 757bf84535fd9d8299c4b51ec92a5ab1926cb671
+ms.openlocfilehash: 6014937fb41d6074e94578ccc47c30eb7b3f63d2
+ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 02/27/2018
-ms.locfileid: "29565815"
+ms.lasthandoff: 05/29/2019
+ms.locfileid: "66376874"
 ---
 # <a name="installation"></a>Instalação
 
 ## <a name="which-python-and-which-version-to-use"></a>Qual Python e qual versão usar
+
 Existem vários interpretadores do Python disponíveis, entre eles:
 
 * CPython - o interpretador do Python padrão e mais geralmente usado
@@ -31,6 +32,7 @@ Existem vários interpretadores do Python disponíveis, entre eles:
 O **CPython** v2.7 ou v3.4+ e o PyPy 5.4.0 são testados e têm suporte do SDK do Azure para Python.
 
 ## <a name="where-to-get-python"></a>Onde obter o Python?
+
 Existem várias maneiras de obter o CPython:
 
 * Diretamente no [Python](https://www.python.org/)
@@ -70,6 +72,8 @@ pip install --pre azure
 
 Se você deseja instalar `azure` a partir da fonte:
 
-    git clone git://github.com/Azure/azure-sdk-for-python.git
-    cd azure-sdk-for-python
-    python setup.py install
+```bash
+git clone git://github.com/Azure/azure-sdk-for-python.git
+cd azure-sdk-for-python
+python setup.py install
+```
