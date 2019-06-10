@@ -8,7 +8,7 @@ metadata:
   author: sptramer
   ms.author: sttramer
   manager: carmonm
-  ms.date: 04/12/2019
+  ms.date: 04/17/2019
   ms.topic: landing-page
   ms.prod: azure
   ms.technology: azure
@@ -27,6 +27,18 @@ sections:
             image:
               src: 'https://docs.microsoft.com/azure/media/index/app-service-web.svg'
             title: Crie e implante um aplicativo Web do Python no Azure.
+          - image:
+              src: 'https://docs.microsoft.com/azure/media/index/AzureFunctions.svg'
+            title: Use o Visual Studio Code para criar e implantar um aplicativo Python sem servidor no Azure Functions.
+            href: 'https://code.visualstudio.com/docs/python/tutorial-azure-functions'
+          - image:
+              src: 'https://docs.microsoft.com/python/azure/media/AzureNotebooks.png'
+            title: Comece a usar o Azure Machine Learning em um Jupyter Notebook.
+            href: 'https://docs.microsoft.com/en-us/azure/notebooks/use-machine-learning-services-jupyter-notebooks?toc=%2Fpython%2Fazure%2FTOC.json'
+          - image:
+              src: 'https://docs.microsoft.com/azure/devops/_img/index/devopsiconpipelines96.svg'
+            title: Crie e implante um aplicativo do Python nos Pipelines do Azure DevOps
+            href: 'https://docs.microsoft.com/azure/devops/pipelines/languages/python-webapp?toc=%2Fpython%2Fazure%2FTOC.json'
           - href: 'https://docs.microsoft.com/azure/cosmos-db/create-sql-api-python?toc=%2Fpython%2Fazure%2FTOC.json'
             image:
               src: 'https://docs.microsoft.com/azure/media/index/cosmosdb.svg'
@@ -44,7 +56,7 @@ sections:
         items:
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/app-service-web.svg'
-            title: 'Aplicativos Web do Azure '
+            title: Aplicativos Web do Azure
             html: 'Crie, implante e dimensione aplicativos Web do Python no Linux.'
             href: 'https://docs.microsoft.com/azure/app-service/containers/quickstart-python?toc=%2Fpython%2Fazure%2FTOC.json'
           - image:
@@ -110,7 +122,7 @@ sections:
               src: 'https://docs.microsoft.com/azure/media/index/cosmosdb.svg'
             title: Cosmos DB
             html: 'Armazene os dados em um banco de dados NoSQL distribuído globalmente, escalonável e com vários modelos.'
-            href: 'https://docs.microsoft.com/azure/cosmos-db/sql-api-python-application?toc=%2Fpython%2Fazure%2FTOC.json'
+            href: 'https://docs.microsoft.com/en-us/azure/cosmos-db/create-sql-api-python?toc=%2Fpython%2Fazure%2FTOC.json'
           - image:
               src: 'https://docs.microsoft.com/azure/media/index/RedisCache.svg'
             title: Cache Redis
@@ -141,18 +153,6 @@ sections:
             title: Barramento de Serviço
             html: Envie mensagens na nuvem por meio de filas PEPS ou assinaturas de tópico.
             href: 'https://docs.microsoft.com/azure/service-bus-messaging/?toc=%2Fpython%2Fazure%2FTOC.json'
-  - title: Azure DevOps
-    items:
-      - type: list
-        style: cards
-        className: cardsM
-        columns: 3
-        items:
-          - image:
-              src: 'https://docs.microsoft.com/azure/devops/_img/index/devopsiconpipelines96.svg'
-            title: Azure Pipelines
-            html: 'Crie, teste e implante o código do Python com Azure Pipelines.'
-            href: 'https://docs.microsoft.com/azure/devops/pipelines/languages/python?toc=%2Fpython%2Fazure%2FTOC.json'
   - title: Segurança e integração
     items:
       - type: list
@@ -175,17 +175,12 @@ sections:
           - href: /python/api?view=azure-python
             image:
               src: 'http://docs.microsoft.com/media/common/i_api-reference.svg'
-            title: Referência SDK do Azure para Python
+            title: Referência do SDK do Azure para a API do Python
           - href: 'https://code.visualstudio.com/docs/python/python-tutorial'
             html: Desenvolva aplicativos do Python e implante no Azure usando o Visual Studio Code.
             image:
               src: 'https://docs.microsoft.com/media/logos/logo_vs-code.svg'
             title: Visual Studio Code
-          - href: 'https://docs.microsoft.com/visualstudio/python/overview-of-python-tools-for-visual-studio?toc=%2Fpython%2Fazure%2FTOC.json'
-            html: 'IntelliSense, ferramentas de desenvolvimento, perfil e depuração para o Python no Visual Studio Code.'
-            image:
-              src: 'https://docs.microsoft.com/media/logos/logo_visual-studio.svg'
-            title: IDE do Visual Studio
           - href: 'https://docs.microsoft.com/cli/azure?toc=%2Fpython%2Fazure%2FTOC.json'
             html: Gerencie os recursos do Azure na linha de comando.
             image:
