@@ -9,17 +9,17 @@ ms.topic: article
 ms.service: Azure
 ms.technology: Azure
 ms.date: 6/15/2017
-ms.author: liwong
-ms.openlocfilehash: b0c640a090657128c7d7a97174f0eed036d0d9dd
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.author: routlaw
+ms.openlocfilehash: 5473c2f58af997695b8d1a6b1d2cfb6c504b50a5
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2017
-ms.locfileid: "20909029"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534430"
 ---
-# <a name="list-images"></a><span data-ttu-id="9cfaa-103">Listar imagens</span><span class="sxs-lookup"><span data-stu-id="9cfaa-103">List images</span></span>
+# <a name="list-images"></a><span data-ttu-id="c8e7b-103">Listar imagens</span><span class="sxs-lookup"><span data-stu-id="c8e7b-103">List images</span></span>
 
-<span data-ttu-id="9cfaa-104">Use o código a seguir para imprimir todas as imagens disponíveis para usar na criação de máquinas virtuais, incluindo todos os SKUs e versões.</span><span class="sxs-lookup"><span data-stu-id="9cfaa-104">Use the following code to print all of the available images to use for creating virtual machines, including all skus and versions.</span></span>
+<span data-ttu-id="c8e7b-104">Use o código a seguir para imprimir todas as imagens disponíveis para usar na criação de máquinas virtuais, incluindo todos os SKUs e versões.</span><span class="sxs-lookup"><span data-stu-id="c8e7b-104">Use the following code to print all of the available images to use for creating virtual machines, including all skus and versions.</span></span>
 
 ```python
 region = 'eastus'

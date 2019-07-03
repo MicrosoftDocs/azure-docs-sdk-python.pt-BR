@@ -2,35 +2,35 @@
 title: Bibliotecas de Banco de Dados SQL do Azure para Python
 description: Conecte-se ao banco de dados SQL do Azure usando pyodbc e o driver ODBC ou gerencie as instâncias do SQL do Azure com a API de gerenciamento.
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: routlaw
 ms.date: 01/09/2018
 ms.topic: reference
 ms.devlang: python
 ms.service: sql-database
-ms.openlocfilehash: 5b73977fb58ed3cb17d675784da921b0e199d165
-ms.sourcegitcommit: 560362db0f65307c8b02b7b7ad8642b5c4aa6294
+ms.openlocfilehash: 9b8a5b120425fc600f34c1e4c4456b0888814fe8
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/08/2018
-ms.locfileid: "33901349"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534209"
 ---
-# <a name="azure-sql-database-libraries-for-python"></a><span data-ttu-id="9d4ca-103">Bibliotecas de Banco de Dados SQL do Azure para Python</span><span class="sxs-lookup"><span data-stu-id="9d4ca-103">Azure SQL Database libraries for Python</span></span>
+# <a name="azure-sql-database-libraries-for-python"></a><span data-ttu-id="bae41-103">Bibliotecas de Banco de Dados SQL do Azure para Python</span><span class="sxs-lookup"><span data-stu-id="bae41-103">Azure SQL Database libraries for Python</span></span>
 
-## <a name="overview"></a><span data-ttu-id="9d4ca-104">Visão geral</span><span class="sxs-lookup"><span data-stu-id="9d4ca-104">Overview</span></span>
+## <a name="overview"></a><span data-ttu-id="bae41-104">Visão geral</span><span class="sxs-lookup"><span data-stu-id="bae41-104">Overview</span></span>
 
-<span data-ttu-id="9d4ca-105">Trabalhe com dados armazenados no [Banco de Dados SQL do Azure](/azure/sql-database/sql-database-technical-overview) a partir de Python com o [driver de banco de dados ODBC](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers).</span><span class="sxs-lookup"><span data-stu-id="9d4ca-105">Work with data stored in [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) from Python with the pyodbc [ODBC database driver](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers).</span></span> <span data-ttu-id="9d4ca-106">Confira nosso [início rápido](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python). Basta se conectar a um banco de dados SQL do Azure e usar instruções Transact-SQL para consultar dados e [exemplo](https://github.com/mkleehammer/pyodbc/wiki/Getting-started) de introdução com pyodbc.</span><span class="sxs-lookup"><span data-stu-id="9d4ca-106">View our [quickstart](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) on connecting to an Azure SQL database and using Transact-SQL statements to query data and getting started [sample](https://github.com/mkleehammer/pyodbc/wiki/Getting-started) with pyodbc.</span></span>
+<span data-ttu-id="bae41-105">Trabalhe com dados armazenados no [Banco de Dados SQL do Azure](/azure/sql-database/sql-database-technical-overview) a partir de Python com o [driver de banco de dados ODBC](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers).</span><span class="sxs-lookup"><span data-stu-id="bae41-105">Work with data stored in [Azure SQL Database](/azure/sql-database/sql-database-technical-overview) from Python with the pyodbc [ODBC database driver](https://github.com/mkleehammer/pyodbc/wiki/Drivers-and-Driver-Managers).</span></span> <span data-ttu-id="bae41-106">Confira nosso [início rápido](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python). Basta se conectar a um banco de dados SQL do Azure e usar instruções Transact-SQL para consultar dados e [exemplo](https://github.com/mkleehammer/pyodbc/wiki/Getting-started) de introdução com pyodbc.</span><span class="sxs-lookup"><span data-stu-id="bae41-106">View our [quickstart](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python) on connecting to an Azure SQL database and using Transact-SQL statements to query data and getting started [sample](https://github.com/mkleehammer/pyodbc/wiki/Getting-started) with pyodbc.</span></span>
 
-## <a name="install-odbc-driver-and-pyodbc"></a><span data-ttu-id="9d4ca-107">Instalar pyodbc e o driver ODBC</span><span class="sxs-lookup"><span data-stu-id="9d4ca-107">Install ODBC driver and pyodbc</span></span>
+## <a name="install-odbc-driver-and-pyodbc"></a><span data-ttu-id="bae41-107">Instalar pyodbc e o driver ODBC</span><span class="sxs-lookup"><span data-stu-id="bae41-107">Install ODBC driver and pyodbc</span></span>
 
 ```bash
 pip install pyodbc
 ```
-<span data-ttu-id="9d4ca-108">Mais [detalhes](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries) sobre como instalar as bibliotecas de comunicação de banco de dados e Python.</span><span class="sxs-lookup"><span data-stu-id="9d4ca-108">More [details](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries) about installing the python and database communication libraries.</span></span>
+<span data-ttu-id="bae41-108">Mais [detalhes](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#prerequisites) sobre como instalar as bibliotecas de comunicação de banco de dados e Python.</span><span class="sxs-lookup"><span data-stu-id="bae41-108">More [details](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#prerequisites) about installing the python and database communication libraries.</span></span>
 
-## <a name="connect-and-execute-a-sql-query"></a><span data-ttu-id="9d4ca-109">Conectar e executar uma consulta SQL</span><span class="sxs-lookup"><span data-stu-id="9d4ca-109">Connect and execute a SQL query</span></span>
+## <a name="connect-and-execute-a-sql-query"></a><span data-ttu-id="bae41-109">Conectar e executar uma consulta SQL</span><span class="sxs-lookup"><span data-stu-id="bae41-109">Connect and execute a SQL query</span></span>
 
-### <a name="connect-to-a-sql-database"></a><span data-ttu-id="9d4ca-110">Conectar-se a um Banco de Dados SQL</span><span class="sxs-lookup"><span data-stu-id="9d4ca-110">Connect to a SQL database</span></span>
+### <a name="connect-to-a-sql-database"></a><span data-ttu-id="bae41-110">Conectar-se a um Banco de Dados SQL</span><span class="sxs-lookup"><span data-stu-id="bae41-110">Connect to a SQL database</span></span>
 
 ```python
 import pyodbc
@@ -45,7 +45,7 @@ cnxn = pyodbc.connect('DRIVER='+driver+';PORT=1433;SERVER='+server+';PORT=1443;D
 cursor = cnxn.cursor()
 ```
 
-### <a name="execute-a-sql-query"></a><span data-ttu-id="9d4ca-111">Executar uma consulta SQL</span><span class="sxs-lookup"><span data-stu-id="9d4ca-111">Execute a SQL query</span></span>
+### <a name="execute-a-sql-query"></a><span data-ttu-id="bae41-111">Executar uma consulta SQL</span><span class="sxs-lookup"><span data-stu-id="bae41-111">Execute a SQL query</span></span>
 
 ```python
 cursor.execute("SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName FROM [SalesLT].[ProductCategory] pc JOIN [SalesLT].[Product] p ON pc.productcategoryid = p.productcategoryid")
@@ -56,15 +56,15 @@ while row:
 ```
 
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="9d4ca-112">exemplo de pyodbc</span><span class="sxs-lookup"><span data-stu-id="9d4ca-112">pyodbc sample</span></span>](https://github.com/mkleehammer/pyodbc/wiki/Getting-started)
+> [<span data-ttu-id="bae41-112">exemplo de pyodbc</span><span class="sxs-lookup"><span data-stu-id="bae41-112">pyodbc sample</span></span>](https://github.com/mkleehammer/pyodbc/wiki/Getting-started)
 
-## <a name="connecting-to-orms"></a><span data-ttu-id="9d4ca-113">Conectando ao ORMs</span><span class="sxs-lookup"><span data-stu-id="9d4ca-113">Connecting to ORMs</span></span>
+## <a name="connecting-to-orms"></a><span data-ttu-id="bae41-113">Conectando ao ORMs</span><span class="sxs-lookup"><span data-stu-id="bae41-113">Connecting to ORMs</span></span>
 
-<span data-ttu-id="9d4ca-114">o pyodbc funciona com outros ORMs como [SQLAlchemy](http://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) e [Django](https://github.com/lionheart/django-pyodbc/).</span><span class="sxs-lookup"><span data-stu-id="9d4ca-114">pyodbc works with other ORMs such as [SQLAlchemy](http://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) and [Django](https://github.com/lionheart/django-pyodbc/).</span></span> 
+<span data-ttu-id="bae41-114">o pyodbc funciona com outros ORMs como [SQLAlchemy](https://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) e [Django](https://github.com/lionheart/django-pyodbc/).</span><span class="sxs-lookup"><span data-stu-id="bae41-114">pyodbc works with other ORMs such as [SQLAlchemy](https://docs.sqlalchemy.org/en/latest/dialects/mssql.html?highlight=pyodbc#module-sqlalchemy.dialects.mssql.pyodbc) and [Django](https://github.com/lionheart/django-pyodbc/).</span></span> 
 
-## <a name="management-apipythonapioverviewazuresqlmanagement"></a>[<span data-ttu-id="9d4ca-115">API de Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="9d4ca-115">Management API</span></span>](/python/api/overview/azure/sql/management)
+## <a name="management-apipythonapioverviewazuresqlmanagement"></a>[<span data-ttu-id="bae41-115">API de Gerenciamento</span><span class="sxs-lookup"><span data-stu-id="bae41-115">Management API</span></span>](/python/api/overview/azure/sql/management)
 
-<span data-ttu-id="9d4ca-116">Criar e gerenciar recursos do Banco de Dados SQL do Azure em sua assinatura com a API de gerenciamento.</span><span class="sxs-lookup"><span data-stu-id="9d4ca-116">Create and manage Azure SQL Database resources in your subscription with the management API.</span></span> 
+<span data-ttu-id="bae41-116">Criar e gerenciar recursos do Banco de Dados SQL do Azure em sua assinatura com a API de gerenciamento.</span><span class="sxs-lookup"><span data-stu-id="bae41-116">Create and manage Azure SQL Database resources in your subscription with the management API.</span></span> 
 
 ```bash
 pip install azure-common
@@ -72,9 +72,9 @@ pip install azure-mgmt-sql
 pip install azure-mgmt-resource
 ```
 
-## <a name="example"></a><span data-ttu-id="9d4ca-117">Exemplo</span><span class="sxs-lookup"><span data-stu-id="9d4ca-117">Example</span></span>
+## <a name="example"></a><span data-ttu-id="bae41-117">Exemplo</span><span class="sxs-lookup"><span data-stu-id="bae41-117">Example</span></span>
 
-<span data-ttu-id="9d4ca-118">Criar um recurso de Banco de Dados SQL e restringir o acesso a um intervalo de endereços IP usando uma regra de firewall.</span><span class="sxs-lookup"><span data-stu-id="9d4ca-118">Create a SQL Database resource and restrict access to a range of IP addresses using a firewall rule.</span></span>
+<span data-ttu-id="bae41-118">Criar um recurso de Banco de Dados SQL e restringir o acesso a um intervalo de endereços IP usando uma regra de firewall.</span><span class="sxs-lookup"><span data-stu-id="bae41-118">Create a SQL Database resource and restrict access to a range of IP addresses using a firewall rule.</span></span>
 
 ```python
 from azure.common.client_factory import get_client_from_cli_profile
@@ -130,5 +130,5 @@ firewall_rule = sql_client.firewall_rules.create_or_update(
 )
 ```
 > [!div class="nextstepaction"]
-> [<span data-ttu-id="9d4ca-119">Explorar as APIs de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="9d4ca-119">Explore the Management APIs</span></span>](/python/api/overview/azure/sql/management)
+> [<span data-ttu-id="bae41-119">Explorar as APIs de gerenciamento</span><span class="sxs-lookup"><span data-stu-id="bae41-119">Explore the Management APIs</span></span>](/python/api/overview/azure/sql/management)
 
