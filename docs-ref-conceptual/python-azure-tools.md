@@ -8,13 +8,13 @@ ms.topic: article
 ms.service: Azure
 ms.technology: Azure
 ms.date: 06/21/2017
-ms.author: liwong
-ms.openlocfilehash: 35faf0a6b74e4122c22ae0a6304d990dd13df057
-ms.sourcegitcommit: c57305dad01cad925faf50a64953c408429d4ca9
+ms.author: routlaw
+ms.openlocfilehash: 0930654af3c3f5bc6d3341959dff929225ebcf7d
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 12/05/2017
-ms.locfileid: "26184590"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534482"
 ---
 # <a name="azure-tools-for-python-developers"></a>Ferramentas do Azure para desenvolvedores de Python
 
@@ -25,7 +25,7 @@ A CLI do Azure 2.0 fornece uma interface de linha de comando para criar e config
 [Instalar a CLI 2.0 do Azure](https://docs.microsoft.com/cli/azure/install-azure-cli)
 
 ## <a name="visual-studio-code"></a>Visual Studio Code
-Python tem suporte total no Visual Studio Code por meio de extensões. As extensões populares no Marketplace fornecem conclusão de código, uso de Lint, depuração, formatação de código, trechos de código e muito mais.
+Python tem suporte total no Visual Studio Code por meio de extensões. As extensões populares no Marketplace fornecem conclusão de código, uso de Lint, depuração, formatação de código, snippets de código e muito mais.
 
 [Instalar o Visual Studio Code e as extensões](https://code.visualstudio.com/docs/languages/python)
 

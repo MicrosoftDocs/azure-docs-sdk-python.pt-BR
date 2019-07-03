@@ -3,18 +3,18 @@ title: Bibliotecas de Grade de Eventos do Azure para Python
 description: ''
 keywords: Azure, Python, SDK, API, Grade de Eventos
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: routlaw
 ms.date: 08/21/2017
 ms.topic: article
 ms.devlang: python
 ms.service: event-grid
-ms.openlocfilehash: bfaa1908295eb77531e399f1337acdeee512005f
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: e5df1078116f13f959923eac3e0c7b5789545278
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52276830"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534294"
 ---
 # <a name="event-grid-libraries-for-python"></a>Bibliotecas da Grade de Eventos para Python
 
@@ -88,7 +88,7 @@ pip install azure-mgmt-eventgrid
 ### <a name="example"></a>Exemplo
 
 O exemplo a seguir cria um tópico personalizado e assina um ponto de extremidade para o tópico. Em seguida, o código envia um evento para o tópico através de HTTPS.
-O RequestBin é uma ferramenta de terceiros de software livre que permite criar um ponto de extremidade e exibir as solicitações enviadas a ele. Vá para [RequestBin](https://requestb.in/)e clique em **Criar um RequestBin**. Copie a URL do compartimento, pois você precisará dela para assinar o tópico.
+O RequestBin é uma ferramenta de terceiros de software livre que permite criar um ponto de extremidade e exibir as solicitações enviadas a ele. Vá para [RequestBin](https://requestbin.com)e clique em **Criar um RequestBin**. Copie a URL do compartimento, pois você precisará dela para assinar o tópico.
 
 ```python
 from azure.mgmt.resource import ResourceManagementClient

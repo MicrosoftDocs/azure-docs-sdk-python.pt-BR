@@ -3,7 +3,7 @@ title: Bibliotecas do Agendador do Azure para Python
 description: Referência para bibliotecas do Agendador do Azure para Python
 keywords: Azure, Python, SDK, API, Agendador
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: mbaldwin
 ms.date: 02/21/2018
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 98e32799a4240f9946caf1ab7b05e35605d89dc9
-ms.sourcegitcommit: f439ba940d5940359c982015db7ccfb82f9dffd9
+ms.openlocfilehash: 73c33ff808212fade192ca7c7c05a8e64d3fafda
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 11/21/2018
-ms.locfileid: "52277056"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534219"
 ---
 # <a name="azure-scheduler-libraries-for-python"></a>Bibliotecas do Agendador do Azure para Python
 

@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 5890c2091f8456dd9b8bcb68f8a34eed3cae6e04
-ms.sourcegitcommit: d7ad0e8b4ba4add5e6f63e6b9eac54ecccdc7090
+ms.openlocfilehash: 5a23a52414e70facd6feae3af3956a5131f6b5c4
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67148167"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534349"
 ---
 # <a name="azure-cognitive-services-modules-for-python"></a>Módulos de Serviços Cognitivos do Azure para Python
 
@@ -36,7 +36,7 @@ Retorna informações sobre o conteúdo visual encontrado em uma imagem:
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install azure-cognitiveservices-vision-computervision
 ```
 
@@ -48,7 +48,7 @@ Moderação de texto, vídeo e imagens assistida por computador, aumentada com f
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install azure-cognitiveservices-vision-contentmoderator
 ```
 
@@ -60,7 +60,7 @@ Carregue imagens para treinar e personalizar um modelo de visão do computador p
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install azure-cognitiveservices-vision-customvision
 ```
 
@@ -74,7 +74,7 @@ Detecte, identifique, analise, organize e marque rostos em fotos.
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install cognitive-face
 ```
 
@@ -90,7 +90,7 @@ Recupere documentos da Web indexados pela API de Pesquisa na Web do Bing e restr
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install azure-cognitiveservices-search-websearch
 ```
 
@@ -104,7 +104,7 @@ Pesquise imagens e obtenha miniaturas, URLs de imagem completa, metadados de ima
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install azure-cognitiveservices-search-imagesearch
 ```
 
@@ -119,7 +119,7 @@ Pesquise a entidade mais relevante (local, pessoa ou coisa) para determinado ter
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install azure-cognitiveservices-search-entitysearch
 ```
 
@@ -131,7 +131,7 @@ Compile e personalize uma pesquisa na Web que atenda a seu domínio de pesquisa 
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install azure-cognitiveservices-search-customsearch
 ```
 
@@ -145,7 +145,7 @@ Encontre vídeos na Web, obtenha resultados com o criador, codificação, duraç
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install azure-cognitiveservices-search-videosearch
 ```
 
@@ -160,11 +160,11 @@ Pesquise na Web artigos de notícias e trabalhe com o artigo, notícias relacion
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install azure-cognitiveservices-search-newssearch
 ```
 
-[Saiba mais](/azure/cognitive-services/bing-news-search/search-the-web) sobre o serviço de Pesquisa de Notícias do Bing e comece a usar o [Início rápido do Python para API de Pesquisa de Notícias](//azure/cognitive-services/bing-news-search/python).
+[Saiba mais](/azure/cognitive-services/bing-news-search/search-the-web) sobre o serviço de Pesquisa de Notícias do Bing e comece a usar o [Início rápido do Python para API de Pesquisa de Notícias](/azure/cognitive-services/bing-news-search/python).
 
 
 ## <a name="language-modules"></a>Módulos de linguagem
@@ -181,7 +181,7 @@ A API de Análise de Texto é um serviço baseado em nuvem que fornece processam
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install azure-cognitiveservices-language-textanalytics
 ```
 
@@ -196,7 +196,7 @@ Faça verificações da gramática contextual e ortográfica com a API de Verifi
 
 Obtenha o módulo Python com [pip](https://pip.pypa.io/en/stable/quickstart/):
 
-```
+```python
 pip install azure-cognitiveservices-language-spellcheck
 ```
 
