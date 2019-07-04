@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: multiple
-ms.openlocfilehash: 6014937fb41d6074e94578ccc47c30eb7b3f63d2
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: 9fd11cbc7b987b970ceee85c7b11b22e3d6299ea
+ms.sourcegitcommit: 31d7df367b15ec09a5a610eb333295bba0f6b351
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376874"
+ms.lasthandoff: 06/26/2019
+ms.locfileid: "67395445"
 ---
 # <a name="installation"></a>Instalação
 
@@ -77,3 +77,24 @@ git clone git://github.com/Azure/azure-sdk-for-python.git
 cd azure-sdk-for-python
 python setup.py install
 ```
+
+## <a name="install-an-older-version-with-pip"></a>Instalar uma versão mais antiga com o PIP
+Você pode instalar uma versão mais antiga do `azure` especificando os detalhes de versão 'azure==3.0.0'.
+```bash
+pip install azure==3.0.0 
+```
+## <a name="check-sdk-installation-details-with-pip"></a>Verifique os detalhes de instalação do SDK com o PIP
+Você pode verificar o local de instalação, os detalhes de versão etc. do SDK do `azure`.
+```bash
+pip show azure # Show installed version, location details etc.
+pip freeze     # Output installed packages in requirements format.
+pip list       # List installed packages, including editables.
+```
+## <a name="to-uninstall-with-pip"></a>Para desinstalar com o PIP
+Você pode desinstalar todas as bibliotecas do Azure em uma única linha usando o pacote meta `azure`.
+```bash
+pip uninstall azure 
+```
+> [!NOTE]
+> O `pip uninstall azure` remove o pacote meta do `azure`, mas deixa os pacotes individuais do `azure-*` para trás (e outros, como o `adal` e o `msrest`). Um aspecto do Python e do PIP é que para todos os pacotes que têm dependências, a desinstalação do pacote inicial não desinstala as dependências. Para remover o `azure-` e seus pacotes de suporte, execute o comando `pip freeze | grep 'azure-' | xargs pip uninstall -y` (e, em seguida, realize desinstalações individuais para o adal, o msrest e o msrestazure).
+
