@@ -3,7 +3,7 @@ title: Bibliotecas de Recursos do Azure para Python
 description: ''
 keywords: Azure, Python, SDK, API, Recursos
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/19/2017
 ms.topic: article
@@ -11,19 +11,19 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: resources
-ms.openlocfilehash: 32e13bee27db091f0bca12c7d9ae4fc62165f4c0
-ms.sourcegitcommit: 3617d0db0111bbc00072ff8161de2d76606ce0ea
+ms.openlocfilehash: d708a5e7296b166b6e55b9b7b0d995e72e264267
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 08/18/2017
-ms.locfileid: "20909389"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534375"
 ---
 # <a name="azure-resources-libraries-for-python"></a>Bibliotecas de Recursos do Azure para Python 
 
 ## <a name="overview"></a>Visão geral 
 Gerenciar recursos do Azure nos grupos de recursos.
 
-| Pacote  |  Descrição |
+| Pacote  |  DESCRIÇÃO |
 |---|---|
 |[azure.mgmt.resource.features][1]|O Controle de Exposição de Recurso do Azure (AFEC) fornece um mecanismo para os provedores de recursos controlar a exposição de recurso aos usuários.|
 |[azure.mgmt.resource.links][2]|Os recursos do Azure podem ser vinculados para formarem a relações lógicas. Você pode estabelecer links entre recursos que pertencem a grupos de recursos diferentes.|

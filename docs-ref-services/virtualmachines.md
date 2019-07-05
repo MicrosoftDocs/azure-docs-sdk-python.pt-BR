@@ -3,7 +3,7 @@ title: Bibliotecas de Máquina Virtual do Azure para Python
 description: ''
 keywords: Azure, Python, SDK, API, Computação, Máquinas Virtuais
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 06/09/2017
 ms.topic: article
@@ -11,12 +11,12 @@ ms.prod: azure
 ms.technology: azure
 ms.devlang: python
 ms.service: compute
-ms.openlocfilehash: 78750d5f98ab81401c48493aff98d4268c01850d
-ms.sourcegitcommit: 434186988284e0a8268a9de11645912a81226d6b
+ms.openlocfilehash: e09ffed98f3f6050e34ca2cb39e645e30f8bdb15
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 05/29/2019
-ms.locfileid: "66376706"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534183"
 ---
 # <a name="azure-virtual-machine-libraries"></a>Bibliotecas de máquina virtual do Azure
 
@@ -76,11 +76,11 @@ def create_vm()
 
 ## <a name="samples"></a>Exemplos
 
-* [Gerenciar redes virtuais][1]
-* [Autenticar com a Identidade do serviço Gerenciada][2]
-* [Criar uma máquina virtual com a Extensão de Identidade do Serviço Gerenciado][3]
+* [Gerenciar máquinas virtuais][1]
+* [Autenticar com a Identidade de Serviço Gerenciada][2]
+* [Criar uma máquina virtual com a Extensão da Identidade de Serviço Gerenciada][3]
 * [Gerenciar um balanceador de carga][4]
-* [Criar e configurar discos gerenciados][5]
+* [Criar e configurar managed disks][5]
 * [Listar imagens][6] 
 * [Monitorar máquinas virtuais][7]
 

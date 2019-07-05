@@ -3,19 +3,19 @@ title: Bibliotecas de PostgreSQL/MySQL do Azure para Python
 description: ''
 keywords: Azure, Python, SDK, API, SQL, banco de dados, MySQL, PostgreSQL
 author: lisawong19
-ms.author: liwong
+ms.author: routlaw
 manager: douge
 ms.date: 07/19/2017
 ms.topic: article
 ms.prod: azure
 ms.technology: azure
 ms.devlang: python
-ms.openlocfilehash: 402e87ae81e6df64b040293992244902313e5b1b
-ms.sourcegitcommit: fba77bdf8eb9f49621be94544d9fef88aff98c14
+ms.openlocfilehash: 81a29ea16dc9857257859181f0c2e5be8b4b7901
+ms.sourcegitcommit: 46bebbf5dd558750043ce5afadff2ec3714a54e6
 ms.translationtype: HT
 ms.contentlocale: pt-BR
-ms.lasthandoff: 01/23/2019
-ms.locfileid: "54747716"
+ms.lasthandoff: 07/03/2019
+ms.locfileid: "67534234"
 ---
 # <a name="azure-mysqlpostgresql-libraries-for-python"></a>Bibliotecas de PostgreSQL/MySQL do Azure para Python
 
@@ -25,7 +25,7 @@ Trabalhar com recursos e dados armazenados no [Banco de Dados MySQL do Azure](/a
 
 ### <a name="client-odbc-driver-and-pyodbc"></a>Pyodbc e driver ODBC de cliente
 
-A biblioteca de cliente recomendada para acessar o Banco de Dados do Azure para MySQL é o [driver ODBC](/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries) da Microsoft. Use o driver ODBC para se conectar ao banco de dados e executar instruções SQL diretamente.
+A biblioteca de cliente recomendada para acessar o Banco de Dados do Azure para MySQL é o [driver ODBC](/azure/sql-database/sql-database-connect-query-python#prerequisites) da Microsoft. Use o driver ODBC para se conectar ao banco de dados e executar instruções SQL diretamente.
 
 #### <a name="example"></a>Exemplo
 
@@ -113,7 +113,7 @@ Use o driver ODBC e o pyodbc para se conectar ao banco de dados e executar instr
 Saiba mais sobre o [Banco de Dados do Azure para PostgreSQL](https://docs.microsoft.com/azure/postgresql/).
 
 ### <a name="client-odbc-driver-and-pyodbc"></a>Pyodbc e driver ODBC de cliente
-A biblioteca de cliente recomendada para acessar o Banco de Dados do Azure para PostgreSQL é o Microsoft [ODBC driver e o pyodbc](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#install-the-python-and-database-communication-libraries)
+A biblioteca de clientes recomendada para acessar o Banco de Dados do Azure para PostgreSQL é o [driver ODBC da Microsoft e o pyodbc](https://docs.microsoft.com/azure/sql-database/sql-database-connect-query-python#prerequisites).
 
 #### <a name="example"></a>Exemplo 
 
